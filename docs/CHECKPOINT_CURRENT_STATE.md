@@ -2,6 +2,7 @@
 
 ## 1. Current Head
 
+e51e5c4 Clarify Job Tracker portfolio link wording
 10965c5 Document Job Tracker sample app
 
 ## 2. Project
