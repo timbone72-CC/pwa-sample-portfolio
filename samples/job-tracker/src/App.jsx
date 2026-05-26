@@ -164,6 +164,66 @@ function App() {
       <section className="section-card">
         <div className="section-heading">
           <div>
+            <p className="eyebrow">Add Job</p>
+            <h2>New job details</h2>
+          </div>
+        </div>
+
+        <form className="job-form">
+          <label>
+            Job Date
+            <input type="date" name="jobDate" />
+          </label>
+
+          <label>
+            Customer or Company
+            <input type="text" name="customer" placeholder="Example: Hill Country Auto" />
+          </label>
+
+          <label>
+            Job Title
+            <input type="text" name="jobTitle" placeholder="Example: Replace shop lights" />
+          </label>
+
+          <label>
+            Job Location
+            <input type="text" name="location" placeholder="Example: San Antonio, TX" />
+          </label>
+
+          <label>
+            Job Status
+            <select name="status" defaultValue="Open">
+              <option>Open</option>
+              <option>In Progress</option>
+              <option>Completed</option>
+              <option>On Hold</option>
+            </select>
+          </label>
+
+          <label>
+            Optional Amount
+            <input type="number" name="amount" min="0" step="0.01" placeholder="0.00" />
+          </label>
+
+          <label className="job-form__wide">
+            Job Notes
+            <textarea name="notes" rows="4" placeholder="Add job details, next steps, or customer notes." />
+          </label>
+
+          <div className="form-actions job-form__wide">
+            <button type="button">Save Job</button>
+            <button className="secondary-button" type="button">Clear Form</button>
+          </div>
+
+          <p className="helper-text job-form__wide">
+            This form is a static layout in this slice. Saving to local browser storage will be added next.
+          </p>
+        </form>
+      </section>
+
+      <section className="section-card">
+        <div className="section-heading">
+          <div>
             <p className="eyebrow">Saved Jobs</p>
             <h2>Sample job records</h2>
           </div>

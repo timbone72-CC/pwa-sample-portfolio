@@ -173,6 +173,57 @@ button:focus-visible,
   line-height: 1;
 }
 
+
+/* 4. Job Form */
+
+.job-form {
+  display: grid;
+  gap: 0.9rem;
+}
+
+.job-form label {
+  display: grid;
+  gap: 0.4rem;
+  color: #334155;
+  font-size: 0.9rem;
+  font-weight: 900;
+}
+
+.job-form input,
+.job-form select,
+.job-form textarea {
+  width: 100%;
+  min-height: 46px;
+  border: 1px solid #cbd5e1;
+  border-radius: 14px;
+  padding: 0.8rem 0.9rem;
+  background: #ffffff;
+  color: #0f172a;
+  font: inherit;
+}
+
+.job-form textarea {
+  resize: vertical;
+}
+
+.job-form input:focus,
+.job-form select:focus,
+.job-form textarea:focus {
+  border-color: #2563eb;
+  outline: 3px solid rgba(37, 99, 235, 0.14);
+}
+
+.form-actions {
+  display: grid;
+  gap: 0.75rem;
+}
+
+.secondary-button {
+  background: #e2e8f0;
+  color: #1e293b;
+  box-shadow: none;
+}
+
 /* 4. Job Records */
 
 .job-list {
@@ -299,6 +350,18 @@ button:focus-visible,
   .action-grid,
   .future-grid {
     grid-template-columns: repeat(3, 1fr);
+  }
+
+  .job-form {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .job-form__wide {
+    grid-column: 1 / -1;
+  }
+
+  .form-actions {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
   .job-card__header {
