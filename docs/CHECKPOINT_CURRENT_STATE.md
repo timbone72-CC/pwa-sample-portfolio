@@ -1,8 +1,10 @@
 # PWA Sample Portfolio Current State
 
-## 1. Current Head
+## 1. Last Verified Head
 
-7a4df85 Fix checkpoint current head
+162e122 Update checkpoint after current head fix
+
+This value records the latest verified repository head before this checkpoint edit is committed.
 
 ## 2. Project
 
