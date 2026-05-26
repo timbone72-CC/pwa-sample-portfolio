@@ -340,6 +340,33 @@ button:focus-visible,
   line-height: 1.55;
 }
 
+
+/* 6. Help */
+
+.help-list {
+  display: grid;
+  gap: 0.8rem;
+}
+
+.help-list article {
+  border: 1px solid #dbe4f0;
+  border-radius: 18px;
+  padding: 1rem;
+  background: #ffffff;
+}
+
+.help-list h3 {
+  margin: 0 0 0.35rem;
+  color: #0f172a;
+  font-size: 1rem;
+}
+
+.help-list p {
+  margin: 0;
+  color: #64748b;
+  line-height: 1.55;
+}
+
 /* 6. Wider Screens */
 
 @media (min-width: 720px) {
@@ -373,6 +400,10 @@ button:focus-visible,
 
   .action-grid {
     grid-template-columns: repeat(4, 1fr);
+  }
+
+  .help-list {
+    grid-template-columns: repeat(2, 1fr);
   }
 
   .job-form {

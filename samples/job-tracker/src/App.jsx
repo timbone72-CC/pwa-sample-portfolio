@@ -618,6 +618,37 @@ function App() {
       <section className="section-card">
         <div className="section-heading">
           <div>
+            <p className="eyebrow">Help</p>
+            <h2>How this sample works</h2>
+          </div>
+        </div>
+
+        <div className="help-list">
+          <article>
+            <h3>1. Add a job</h3>
+            <p>Enter a customer, job title, status, notes, and optional amount.</p>
+          </article>
+
+          <article>
+            <h3>2. Save locally</h3>
+            <p>Jobs are saved in this browser only. No login, backend, or cloud database is used.</p>
+          </article>
+
+          <article>
+            <h3>3. Export or back up</h3>
+            <p>Download CSV records, download a JSON backup, restore a backup, or print a simple report.</p>
+          </article>
+
+          <article>
+            <h3>4. Grow later</h3>
+            <p>Future add-ons show what could be added without pretending those features are active now.</p>
+          </article>
+        </div>
+      </section>
+
+      <section className="section-card">
+        <div className="section-heading">
+          <div>
             <p className="eyebrow">Future Options</p>
             <h2>Clear roadmap previews</h2>
           </div>
