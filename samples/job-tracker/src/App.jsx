@@ -1,51 +1,56 @@
+import { useEffect, useState } from 'react'
 import './App.css'
 
-// 1. App Data
-const dashboardStats = [
-  {
-    label: 'Open Jobs',
-    value: '3',
-    detail: 'Ready for follow-up',
-  },
-  {
-    label: 'Completed',
-    value: '8',
-    detail: 'This month',
-  },
-  {
-    label: 'Estimated Total',
-    value: '$4,850',
-    detail: 'Sample job value',
-  },
-]
+// 1. Storage Constants
+const STORAGE_KEY = 'pwaSampleJobTracker.jobs'
+
+// 2. App Data
+const initialFormState = {
+  jobDate: '',
+  customer: '',
+  jobTitle: '',
+  location: '',
+  status: 'Open',
+  amount: '',
+  notes: '',
+}
 
 const sampleJobs = [
   {
-    id: 'job-001',
+    id: 'sample-job-001',
     title: 'Replace shop lights',
     customer: 'Hill Country Auto',
     location: 'San Antonio, TX',
     status: 'Open',
     date: '2026-05-25',
+    amount: '1250',
     notes: 'Waiting on customer approval for fixture count.',
+    createdAt: '2026-05-25T08:00:00.000Z',
+    updatedAt: '2026-05-25T08:00:00.000Z',
   },
   {
-    id: 'job-002',
+    id: 'sample-job-002',
     title: 'Install gate keypad',
     customer: 'Lone Star Storage',
     location: 'Schertz, TX',
     status: 'In Progress',
     date: '2026-05-24',
+    amount: '2100',
     notes: 'Parts are on site. Finish wiring on next visit.',
+    createdAt: '2026-05-24T08:00:00.000Z',
+    updatedAt: '2026-05-24T08:00:00.000Z',
   },
   {
-    id: 'job-003',
+    id: 'sample-job-003',
     title: 'Repair office outlets',
     customer: 'Cibolo Dental',
     location: 'Cibolo, TX',
     status: 'Completed',
     date: '2026-05-22',
+    amount: '1500',
     notes: 'Customer signed off. Ready for report export.',
+    createdAt: '2026-05-22T08:00:00.000Z',
+    updatedAt: '2026-05-22T08:00:00.000Z',
   },
 ]
 
@@ -67,7 +72,46 @@ const futureAddOns = [
   },
 ]
 
-// 2. Small UI Helpers
+// 3. Storage Helpers
+function loadSavedJobs() {
+  const storedJobs = window.localStorage.getItem(STORAGE_KEY)
+
+  if (!storedJobs) {
+    return sampleJobs
+  }
+
+  try {
+    const parsedJobs = JSON.parse(storedJobs)
+
+    if (!Array.isArray(parsedJobs)) {
+      return sampleJobs
+    }
+
+    return parsedJobs
+  } catch {
+    return sampleJobs
+  }
+}
+
+function saveJobs(jobs) {
+  window.localStorage.setItem(STORAGE_KEY, JSON.stringify(jobs))
+}
+
+// 4. Formatting Helpers
+function formatCurrency(value) {
+  const amount = Number(value)
+
+  if (!Number.isFinite(amount) || amount <= 0) {
+    return 'Not set'
+  }
+
+  return new Intl.NumberFormat('en-US', {
+    currency: 'USD',
+    style: 'currency',
+  }).format(amount)
+}
+
+// 5. Small UI Helpers
 function StatusBadge({ status }) {
   return <span className="status-badge">{status}</span>
 }
@@ -82,7 +126,7 @@ function DashboardCard({ label, value, detail }) {
   )
 }
 
-function JobCard({ job }) {
+function JobCard({ job, onDelete }) {
   return (
     <article className="job-card">
       <div className="job-card__header">
@@ -96,15 +140,29 @@ function JobCard({ job }) {
       <dl className="job-card__details">
         <div>
           <dt>Date</dt>
-          <dd>{job.date}</dd>
+          <dd>{job.date || 'Not set'}</dd>
         </div>
         <div>
           <dt>Location</dt>
-          <dd>{job.location}</dd>
+          <dd>{job.location || 'Not set'}</dd>
+        </div>
+        <div>
+          <dt>Amount</dt>
+          <dd>{formatCurrency(job.amount)}</dd>
+        </div>
+        <div>
+          <dt>Updated</dt>
+          <dd>{new Date(job.updatedAt).toLocaleDateString()}</dd>
         </div>
       </dl>
 
-      <p className="job-card__notes">{job.notes}</p>
+      <p className="job-card__notes">{job.notes || 'No notes added.'}</p>
+
+      <div className="job-card__actions">
+        <button className="danger-button" type="button" onClick={() => onDelete(job.id)}>
+          Delete Job
+        </button>
+      </div>
     </article>
   )
 }
@@ -121,8 +179,93 @@ function FutureAddOnCard({ item }) {
   )
 }
 
-// 3. Main App
+// 6. Main App
 function App() {
+  const [jobs, setJobs] = useState(() => loadSavedJobs())
+  const [formData, setFormData] = useState(initialFormState)
+
+  useEffect(() => {
+    saveJobs(jobs)
+  }, [jobs])
+
+  const openJobs = jobs.filter((job) => job.status !== 'Completed').length
+  const completedJobs = jobs.filter((job) => job.status === 'Completed').length
+  const estimatedTotal = jobs.reduce((total, job) => {
+    const amount = Number(job.amount)
+
+    if (!Number.isFinite(amount)) {
+      return total
+    }
+
+    return total + amount
+  }, 0)
+
+  const dashboardStats = [
+    {
+      label: 'Open Jobs',
+      value: String(openJobs),
+      detail: 'Not completed yet',
+    },
+    {
+      label: 'Completed',
+      value: String(completedJobs),
+      detail: 'Saved locally',
+    },
+    {
+      label: 'Estimated Total',
+      value: formatCurrency(estimatedTotal),
+      detail: 'From saved jobs',
+    },
+  ]
+
+  function handleInputChange(event) {
+    const { name, value } = event.target
+
+    setFormData((currentFormData) => ({
+      ...currentFormData,
+      [name]: value,
+    }))
+  }
+
+  function handleSaveJob() {
+    if (!formData.jobTitle.trim() || !formData.customer.trim()) {
+      window.alert('Job Title and Customer or Company are required.')
+      return
+    }
+
+    const now = new Date().toISOString()
+
+    const newJob = {
+      id: crypto.randomUUID(),
+      title: formData.jobTitle.trim(),
+      customer: formData.customer.trim(),
+      location: formData.location.trim(),
+      status: formData.status,
+      date: formData.jobDate,
+      amount: formData.amount,
+      notes: formData.notes.trim(),
+      createdAt: now,
+      updatedAt: now,
+    }
+
+    setJobs((currentJobs) => [newJob, ...currentJobs])
+    setFormData(initialFormState)
+  }
+
+  function handleDeleteJob(jobId) {
+    const shouldDelete = window.confirm('Delete this job record?')
+
+    if (!shouldDelete) {
+      return
+    }
+
+    setJobs((currentJobs) => currentJobs.filter((job) => job.id !== jobId))
+  }
+
+  function handleClearForm() {
+    setFormData(initialFormState)
+  }
+
   return (
     <main className="app-shell">
       <header className="app-header">
@@ -146,7 +289,9 @@ function App() {
             <p className="eyebrow">Dashboard</p>
             <h2>Today&apos;s work snapshot</h2>
           </div>
-          <button type="button">Add Job</button>
+          <a className="button-link" href="#add-job">
+            Add Job
+          </a>
         </div>
 
         <div className="dashboard-grid">
@@ -161,7 +306,7 @@ function App() {
         </div>
       </section>
 
-      <section className="section-card">
+      <section id="add-job" className="section-card">
         <div className="section-heading">
           <div>
             <p className="eyebrow">Add Job</p>
@@ -172,27 +317,50 @@ function App() {
         <form className="job-form">
           <label>
             Job Date
-            <input type="date" name="jobDate" />
+            <input
+              type="date"
+              name="jobDate"
+              value={formData.jobDate}
+              onChange={handleInputChange}
+            />
           </label>
 
           <label>
             Customer or Company
-            <input type="text" name="customer" placeholder="Example: Hill Country Auto" />
+            <input
+              type="text"
+              name="customer"
+              placeholder="Example: Hill Country Auto"
+              value={formData.customer}
+              onChange={handleInputChange}
+            />
           </label>
 
           <label>
             Job Title
-            <input type="text" name="jobTitle" placeholder="Example: Replace shop lights" />
+            <input
+              type="text"
+              name="jobTitle"
+              placeholder="Example: Replace shop lights"
+              value={formData.jobTitle}
+              onChange={handleInputChange}
+            />
           </label>
 
           <label>
             Job Location
-            <input type="text" name="location" placeholder="Example: San Antonio, TX" />
+            <input
+              type="text"
+              name="location"
+              placeholder="Example: San Antonio, TX"
+              value={formData.location}
+              onChange={handleInputChange}
+            />
           </label>
 
           <label>
             Job Status
-            <select name="status" defaultValue="Open">
+            <select name="status" value={formData.status} onChange={handleInputChange}>
               <option>Open</option>
               <option>In Progress</option>
               <option>Completed</option>
@@ -202,21 +370,39 @@ function App() {
 
           <label>
             Optional Amount
-            <input type="number" name="amount" min="0" step="0.01" placeholder="0.00" />
+            <input
+              type="number"
+              name="amount"
+              min="0"
+              step="0.01"
+              placeholder="0.00"
+              value={formData.amount}
+              onChange={handleInputChange}
+            />
           </label>
 
           <label className="job-form__wide">
             Job Notes
-            <textarea name="notes" rows="4" placeholder="Add job details, next steps, or customer notes." />
+            <textarea
+              name="notes"
+              rows="4"
+              placeholder="Add job details, next steps, or customer notes."
+              value={formData.notes}
+              onChange={handleInputChange}
+            />
           </label>
 
           <div className="form-actions job-form__wide">
-            <button type="button">Save Job</button>
-            <button className="secondary-button" type="button">Clear Form</button>
+            <button type="button" onClick={handleSaveJob}>
+              Save Job
+            </button>
+            <button className="secondary-button" type="button" onClick={handleClearForm}>
+              Clear Form
+            </button>
           </div>
 
           <p className="helper-text job-form__wide">
-            This form is a static layout in this slice. Saving to local browser storage will be added next.
+            Jobs save to this browser&apos;s local storage. No login or backend is used in this sample.
           </p>
         </form>
       </section>
@@ -225,14 +411,18 @@ function App() {
         <div className="section-heading">
           <div>
             <p className="eyebrow">Saved Jobs</p>
-            <h2>Sample job records</h2>
+            <h2>Saved job records</h2>
           </div>
         </div>
 
         <div className="job-list">
-          {sampleJobs.map((job) => (
-            <JobCard key={job.id} job={job} />
-          ))}
+          {jobs.length === 0 ? (
+            <p className="helper-text">No jobs saved yet. Add the first job above.</p>
+          ) : (
+            jobs.map((job) => (
+              <JobCard key={job.id} job={job} onDelete={handleDeleteJob} />
+            ))
+          )}
         </div>
       </section>
 
@@ -251,8 +441,8 @@ function App() {
         </div>
 
         <p className="helper-text">
-          These buttons are layout placeholders for the first shell. Working
-          export, backup, and print logic will be added in later slices.
+          These export buttons are still placeholders. Working export, backup,
+          and print logic will be added in later slices.
         </p>
       </section>
 
