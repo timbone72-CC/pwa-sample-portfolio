@@ -150,6 +150,20 @@ function buildJobsCsv(jobs) {
     .join('\n')
 }
 
+function buildJobsBackup(jobs) {
+  return JSON.stringify(
+    {
+      appId: 'pwa-sample-job-tracker',
+      appName: 'Job Tracker PWA Sample',
+      schemaVersion: 1,
+      exportedAt: new Date().toISOString(),
+      jobs,
+    },
+    null,
+    2,
+  )
+}
+
 // 5. Formatting Helpers
 function formatCurrency(value) {
   const amount = Number(value)
@@ -329,6 +343,16 @@ function App() {
     })
   }
 
+  function handleDownloadBackup() {
+    const backup = buildJobsBackup(jobs)
+
+    downloadTextFile({
+      contents: backup,
+      filename: 'job-tracker-backup.json',
+      mimeType: 'application/json;charset=utf-8',
+    })
+  }
+
   return (
     <main className="app-shell">
       <header className="app-header">
@@ -500,12 +524,12 @@ function App() {
         <div className="action-grid">
           <button type="button">Print Job Report</button>
           <button type="button" onClick={handleExportCsv}>Export CSV</button>
-          <button type="button">Download JSON Backup</button>
+          <button type="button" onClick={handleDownloadBackup}>Download JSON Backup</button>
         </div>
 
         <p className="helper-text">
-          CSV export now downloads saved job records from this browser. JSON backup
-          and print logic will be added in later slices.
+          CSV export and JSON backup now download saved job records from this browser.
+          Print logic will be added in a later slice.
         </p>
       </section>
 
