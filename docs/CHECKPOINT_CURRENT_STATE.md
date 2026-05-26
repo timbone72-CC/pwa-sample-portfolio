@@ -2,6 +2,7 @@
 
 ## 1. Current Head
 
+9a1a264 Add Job Tracker readiness review
 f83b8bd Add Job Tracker PWA metadata
 e51e5c4 Clarify Job Tracker portfolio link wording
 10965c5 Document Job Tracker sample app
