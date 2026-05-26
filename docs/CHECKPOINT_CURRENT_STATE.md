@@ -2,7 +2,7 @@
 
 ## 1. Current Head
 
-8b609f2 Update checkpoint after Job Tracker readiness review
+7a4df85 Fix checkpoint current head
 
 ## 2. Project
 
