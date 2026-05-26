@@ -1,16 +1,68 @@
-# React + Vite
+# Job Tracker PWA Sample
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## 1. Purpose
 
-Currently, two official plugins are available:
+Job Tracker is a lightweight sample PWA for small-business job tracking.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+It demonstrates how a simple mobile-friendly app can track jobs, save records locally, export data, download backups, restore backups, and print a basic report without requiring a backend or login system.
 
-## React Compiler
+## 2. What Works Now
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+Current working features:
 
-## Expanding the ESLint configuration
+- mobile-friendly app shell
+- dashboard summary
+- add job form
+- saved job records
+- local browser storage
+- delete saved jobs
+- CSV export
+- JSON backup download
+- JSON backup restore with validation
+- printable job report
+- help section
+- future add-on preview cards
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## 3. Local-First Behavior
+
+This sample stores job records in the browser's local storage.
+
+There is no backend, login system, cloud database, or account system in this version.
+
+Data is local to the browser/device unless exported or backed up by the user.
+
+## 4. Future Add-On Examples
+
+The app shows future add-ons as roadmap previews only.
+
+Possible future add-ons:
+
+- Google Sheets handoff
+- photo attachments
+- customer list
+- team login
+- cloud backup
+- invoice conversion
+- admin dashboard
+
+Inactive features must stay clearly labeled as future, planned, or optional.
+
+## 5. Development Commands
+
+Install dependencies:
+
+    npm install
+
+Run locally:
+
+    npm run dev
+
+Build check:
+
+    npm run build
+
+## 6. Portfolio Role
+
+This sample is part of the PWA Sample Portfolio.
+
+It is inspired by FieldLedger but is intentionally more generic, smaller, and easier to understand as a public sample app.
