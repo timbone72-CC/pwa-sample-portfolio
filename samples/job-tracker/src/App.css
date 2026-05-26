@@ -396,3 +396,117 @@ button:focus-visible,
     grid-template-columns: repeat(2, 1fr);
   }
 }
+
+/* 7. Print Report */
+
+@media print {
+  @page {
+    margin: 0.45in;
+  }
+
+  body {
+    background: #ffffff;
+    font-size: 10pt;
+  }
+
+  button,
+  .portfolio-link,
+  .button-link,
+  .form-actions,
+  .future-grid,
+  #add-job,
+  #portfolio-links,
+  .section-card:has(.dashboard-grid),
+  .section-card:has(.action-grid),
+  .section-card:has(.future-grid) {
+    display: none !important;
+  }
+
+  .app-shell {
+    width: 100%;
+    padding: 0;
+  }
+
+  .app-header,
+  .section-card,
+  .job-card {
+    box-shadow: none;
+    border-color: #cbd5e1;
+  }
+
+  .app-header {
+    margin-bottom: 0.4rem;
+    padding: 0.45rem 0.6rem;
+    border-radius: 10px;
+  }
+
+  .app-header h1 {
+    font-size: 1.8rem;
+    letter-spacing: -0.04em;
+  }
+
+  .app-header p {
+    font-size: 9pt;
+    line-height: 1.35;
+  }
+
+  .section-card {
+    margin: 0.45rem 0;
+    padding: 0.55rem;
+    border-radius: 10px;
+    break-inside: auto;
+  }
+
+  .section-heading {
+    margin-bottom: 0.35rem;
+  }
+
+  .section-heading h2 {
+    font-size: 1.15rem;
+  }
+
+  .job-list {
+    gap: 0.35rem;
+  }
+
+  .job-card {
+    padding: 0.45rem 0.55rem;
+    border-radius: 10px;
+    break-inside: avoid;
+  }
+
+  .job-card h3 {
+    font-size: 0.95rem;
+  }
+
+  .job-card__header {
+    grid-template-columns: 1fr auto;
+    gap: 0.35rem;
+  }
+
+  .job-card__details {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 0.35rem;
+    margin: 0.45rem 0;
+  }
+
+  .job-card__details dt,
+  .status-badge {
+    font-size: 7.5pt;
+  }
+
+  .job-card__details dd,
+  .job-card__notes,
+  .job-card__header p {
+    font-size: 8.5pt;
+  }
+
+  .job-card__actions {
+    display: none !important;
+  }
+
+  .helper-text {
+    margin-top: 0.35rem;
+    font-size: 8.5pt;
+  }
+}

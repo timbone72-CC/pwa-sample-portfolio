@@ -428,6 +428,10 @@ function App() {
     reader.readAsText(file)
   }
 
+  function handlePrintReport() {
+    window.print()
+  }
+
   return (
     <main className="app-shell">
       <header className="app-header">
@@ -597,7 +601,7 @@ function App() {
         </div>
 
         <div className="action-grid">
-          <button type="button">Print Job Report</button>
+          <button type="button" onClick={handlePrintReport}>Print Job Report</button>
           <button type="button" onClick={handleExportCsv}>Export CSV</button>
           <button type="button" onClick={handleDownloadBackup}>Download JSON Backup</button>
           <label className="file-button">
@@ -607,8 +611,7 @@ function App() {
         </div>
 
         <p className="helper-text">
-          CSV export, JSON backup, and JSON restore now work with saved job records from this browser.
-          Print logic will be added in a later slice.
+          CSV export, JSON backup, JSON restore, and browser print report now work with saved job records from this browser.
         </p>
       </section>
 
