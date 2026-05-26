@@ -212,3 +212,32 @@ Do not redesign dashboard cards, forms, record cards, reports, or settings panel
 ## 9. Current Decision
 
 The first UI target is a reusable small-business PWA shell that can support the Job Tracker PWA first, then Timesheet, Invoice Helper, and Field Work Log samples later.
+
+## 10. Web Link / Portfolio Link Rule
+
+Each sample app should include a clear web link area.
+
+Purpose:
+
+- connect the sample app back to the builder portfolio
+- let viewers find the FieldLedger case study
+- let viewers see other sample apps
+- provide a simple contact or next-step link when ready
+
+Recommended placement:
+
+- Settings page
+- Help page
+- About section
+- footer area if the app has one
+
+Recommended links:
+
+- portfolio home
+- FieldLedger case study
+- other sample apps
+- contact page or profile link
+
+The link area should not distract from the core app workflow.
+
+Placeholder links are allowed during private development, but public demos should only use real, working links.
