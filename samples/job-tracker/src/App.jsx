@@ -1,121 +1,230 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from './assets/vite.svg'
-import heroImg from './assets/hero.png'
 import './App.css'
 
-function App() {
-  const [count, setCount] = useState(0)
+// 1. App Data
+const dashboardStats = [
+  {
+    label: 'Open Jobs',
+    value: '3',
+    detail: 'Ready for follow-up',
+  },
+  {
+    label: 'Completed',
+    value: '8',
+    detail: 'This month',
+  },
+  {
+    label: 'Estimated Total',
+    value: '$4,850',
+    detail: 'Sample job value',
+  },
+]
 
+const sampleJobs = [
+  {
+    id: 'job-001',
+    title: 'Replace shop lights',
+    customer: 'Hill Country Auto',
+    location: 'San Antonio, TX',
+    status: 'Open',
+    date: '2026-05-25',
+    notes: 'Waiting on customer approval for fixture count.',
+  },
+  {
+    id: 'job-002',
+    title: 'Install gate keypad',
+    customer: 'Lone Star Storage',
+    location: 'Schertz, TX',
+    status: 'In Progress',
+    date: '2026-05-24',
+    notes: 'Parts are on site. Finish wiring on next visit.',
+  },
+  {
+    id: 'job-003',
+    title: 'Repair office outlets',
+    customer: 'Cibolo Dental',
+    location: 'Cibolo, TX',
+    status: 'Completed',
+    date: '2026-05-22',
+    notes: 'Customer signed off. Ready for report export.',
+  },
+]
+
+const futureAddOns = [
+  {
+    title: 'Google Sheets Handoff',
+    status: 'Future Add-On',
+    description: 'Send approved job records to an office review Sheet.',
+  },
+  {
+    title: 'Photo Attachments',
+    status: 'Optional Module',
+    description: 'Attach jobsite photos or completion proof to each job.',
+  },
+  {
+    title: 'Team Login',
+    status: 'Planned',
+    description: 'Add separate worker and office views in a later phase.',
+  },
+]
+
+// 2. Small UI Helpers
+function StatusBadge({ status }) {
+  return <span className="status-badge">{status}</span>
+}
+
+function DashboardCard({ label, value, detail }) {
   return (
-    <>
-      <section id="center">
-        <div className="hero">
-          <img src={heroImg} className="base" width="170" height="179" alt="" />
-          <img src={reactLogo} className="framework" alt="React logo" />
-          <img src={viteLogo} className="vite" alt="Vite logo" />
+    <article className="dashboard-card">
+      <p>{label}</p>
+      <strong>{value}</strong>
+      <span>{detail}</span>
+    </article>
+  )
+}
+
+function JobCard({ job }) {
+  return (
+    <article className="job-card">
+      <div className="job-card__header">
+        <div>
+          <h3>{job.title}</h3>
+          <p>{job.customer}</p>
+        </div>
+        <StatusBadge status={job.status} />
+      </div>
+
+      <dl className="job-card__details">
+        <div>
+          <dt>Date</dt>
+          <dd>{job.date}</dd>
         </div>
         <div>
-          <h1>Get started</h1>
+          <dt>Location</dt>
+          <dd>{job.location}</dd>
+        </div>
+      </dl>
+
+      <p className="job-card__notes">{job.notes}</p>
+    </article>
+  )
+}
+
+function FutureAddOnCard({ item }) {
+  return (
+    <article className="future-card">
+      <div>
+        <h3>{item.title}</h3>
+        <span>{item.status}</span>
+      </div>
+      <p>{item.description}</p>
+    </article>
+  )
+}
+
+// 3. Main App
+function App() {
+  return (
+    <main className="app-shell">
+      <header className="app-header">
+        <div>
+          <p className="eyebrow">Small Business PWA Sample</p>
+          <h1>Job Tracker</h1>
           <p>
-            Edit <code>src/App.jsx</code> and save to test <code>HMR</code>
+            A lightweight sample app for tracking jobs, statuses, notes,
+            reports, exports, and future workflow add-ons.
           </p>
         </div>
-        <button
-          type="button"
-          className="counter"
-          onClick={() => setCount((count) => count + 1)}
-        >
-          Count is {count}
-        </button>
-      </section>
 
-      <div className="ticks"></div>
+        <a className="portfolio-link" href="#portfolio-links">
+          Portfolio Links
+        </a>
+      </header>
 
-      <section id="next-steps">
-        <div id="docs">
-          <svg className="icon" role="presentation" aria-hidden="true">
-            <use href="/icons.svg#documentation-icon"></use>
-          </svg>
-          <h2>Documentation</h2>
-          <p>Your questions, answered</p>
-          <ul>
-            <li>
-              <a href="https://vite.dev/" target="_blank">
-                <img className="logo" src={viteLogo} alt="" />
-                Explore Vite
-              </a>
-            </li>
-            <li>
-              <a href="https://react.dev/" target="_blank">
-                <img className="button-icon" src={reactLogo} alt="" />
-                Learn more
-              </a>
-            </li>
-          </ul>
+      <section className="section-card">
+        <div className="section-heading">
+          <div>
+            <p className="eyebrow">Dashboard</p>
+            <h2>Today&apos;s work snapshot</h2>
+          </div>
+          <button type="button">Add Job</button>
         </div>
-        <div id="social">
-          <svg className="icon" role="presentation" aria-hidden="true">
-            <use href="/icons.svg#social-icon"></use>
-          </svg>
-          <h2>Connect with us</h2>
-          <p>Join the Vite community</p>
-          <ul>
-            <li>
-              <a href="https://github.com/vitejs/vite" target="_blank">
-                <svg
-                  className="button-icon"
-                  role="presentation"
-                  aria-hidden="true"
-                >
-                  <use href="/icons.svg#github-icon"></use>
-                </svg>
-                GitHub
-              </a>
-            </li>
-            <li>
-              <a href="https://chat.vite.dev/" target="_blank">
-                <svg
-                  className="button-icon"
-                  role="presentation"
-                  aria-hidden="true"
-                >
-                  <use href="/icons.svg#discord-icon"></use>
-                </svg>
-                Discord
-              </a>
-            </li>
-            <li>
-              <a href="https://x.com/vite_js" target="_blank">
-                <svg
-                  className="button-icon"
-                  role="presentation"
-                  aria-hidden="true"
-                >
-                  <use href="/icons.svg#x-icon"></use>
-                </svg>
-                X.com
-              </a>
-            </li>
-            <li>
-              <a href="https://bsky.app/profile/vite.dev" target="_blank">
-                <svg
-                  className="button-icon"
-                  role="presentation"
-                  aria-hidden="true"
-                >
-                  <use href="/icons.svg#bluesky-icon"></use>
-                </svg>
-                Bluesky
-              </a>
-            </li>
-          </ul>
+
+        <div className="dashboard-grid">
+          {dashboardStats.map((stat) => (
+            <DashboardCard
+              key={stat.label}
+              label={stat.label}
+              value={stat.value}
+              detail={stat.detail}
+            />
+          ))}
         </div>
       </section>
 
-      <div className="ticks"></div>
-      <section id="spacer"></section>
-    </>
+      <section className="section-card">
+        <div className="section-heading">
+          <div>
+            <p className="eyebrow">Saved Jobs</p>
+            <h2>Sample job records</h2>
+          </div>
+        </div>
+
+        <div className="job-list">
+          {sampleJobs.map((job) => (
+            <JobCard key={job.id} job={job} />
+          ))}
+        </div>
+      </section>
+
+      <section className="section-card">
+        <div className="section-heading">
+          <div>
+            <p className="eyebrow">Exports</p>
+            <h2>Report and backup actions</h2>
+          </div>
+        </div>
+
+        <div className="action-grid">
+          <button type="button">Print Job Report</button>
+          <button type="button">Export CSV</button>
+          <button type="button">Download JSON Backup</button>
+        </div>
+
+        <p className="helper-text">
+          These buttons are layout placeholders for the first shell. Working
+          export, backup, and print logic will be added in later slices.
+        </p>
+      </section>
+
+      <section className="section-card">
+        <div className="section-heading">
+          <div>
+            <p className="eyebrow">Future Options</p>
+            <h2>Clear roadmap previews</h2>
+          </div>
+        </div>
+
+        <div className="future-grid">
+          {futureAddOns.map((item) => (
+            <FutureAddOnCard key={item.title} item={item} />
+          ))}
+        </div>
+      </section>
+
+      <section id="portfolio-links" className="section-card">
+        <div className="section-heading">
+          <div>
+            <p className="eyebrow">About</p>
+            <h2>Portfolio links</h2>
+          </div>
+        </div>
+
+        <p className="helper-text">
+          Placeholder area for the builder portfolio, FieldLedger case study,
+          other sample apps, and contact link.
+        </p>
+      </section>
+    </main>
   )
 }
 
