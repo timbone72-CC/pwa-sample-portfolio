@@ -71,7 +71,7 @@ Current working Job Tracker features:
 - browser print report
 - help section
 - future add-on cards
-- portfolio link placeholder
+- portfolio link section prepared but not publicly connected yet
 
 ## 6. Current Rules
 

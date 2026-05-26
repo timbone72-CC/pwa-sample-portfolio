@@ -670,8 +670,8 @@ function App() {
         </div>
 
         <p className="helper-text">
-          Placeholder area for the builder portfolio, FieldLedger case study,
-          other sample apps, and contact link.
+          Public portfolio, FieldLedger case study, other sample app, and contact links
+          will be connected before this sample is published.
         </p>
       </section>
     </main>
