@@ -97,7 +97,60 @@ function saveJobs(jobs) {
   window.localStorage.setItem(STORAGE_KEY, JSON.stringify(jobs))
 }
 
-// 4. Formatting Helpers
+// 4. Export Helpers
+function escapeCsvValue(value) {
+  const stringValue = String(value ?? '')
+
+  if (/[",\n]/.test(stringValue)) {
+    return `"${stringValue.replaceAll('"', '""')}"`
+  }
+
+  return stringValue
+}
+
+function downloadTextFile({ contents, filename, mimeType }) {
+  const blob = new Blob([contents], { type: mimeType })
+  const url = URL.createObjectURL(blob)
+  const link = document.createElement('a')
+
+  link.href = url
+  link.download = filename
+  link.click()
+
+  URL.revokeObjectURL(url)
+}
+
+function buildJobsCsv(jobs) {
+  const headers = [
+    'Job Date',
+    'Customer',
+    'Job Title',
+    'Location',
+    'Status',
+    'Amount',
+    'Notes',
+    'Created At',
+    'Updated At',
+  ]
+
+  const rows = jobs.map((job) => [
+    job.date,
+    job.customer,
+    job.title,
+    job.location,
+    job.status,
+    job.amount,
+    job.notes,
+    job.createdAt,
+    job.updatedAt,
+  ])
+
+  return [headers, ...rows]
+    .map((row) => row.map(escapeCsvValue).join(','))
+    .join('\n')
+}
+
+// 5. Formatting Helpers
 function formatCurrency(value) {
   const amount = Number(value)
 
@@ -111,7 +164,7 @@ function formatCurrency(value) {
   }).format(amount)
 }
 
-// 5. Small UI Helpers
+// 6. Small UI Helpers
 function StatusBadge({ status }) {
   return <span className="status-badge">{status}</span>
 }
@@ -179,7 +232,7 @@ function FutureAddOnCard({ item }) {
   )
 }
 
-// 6. Main App
+// 7. Main App
 function App() {
   const [jobs, setJobs] = useState(() => loadSavedJobs())
   const [formData, setFormData] = useState(initialFormState)
@@ -264,6 +317,16 @@ function App() {
 
   function handleClearForm() {
     setFormData(initialFormState)
+  }
+
+  function handleExportCsv() {
+    const csv = buildJobsCsv(jobs)
+
+    downloadTextFile({
+      contents: csv,
+      filename: 'job-tracker-records.csv',
+      mimeType: 'text/csv;charset=utf-8',
+    })
   }
 
   return (
@@ -436,12 +499,12 @@ function App() {
 
         <div className="action-grid">
           <button type="button">Print Job Report</button>
-          <button type="button">Export CSV</button>
+          <button type="button" onClick={handleExportCsv}>Export CSV</button>
           <button type="button">Download JSON Backup</button>
         </div>
 
         <p className="helper-text">
-          These export buttons are still placeholders. Working export, backup,
+          CSV export now downloads saved job records from this browser. JSON backup
           and print logic will be added in later slices.
         </p>
       </section>
