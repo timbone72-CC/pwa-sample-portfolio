@@ -72,7 +72,43 @@ const futureAddOns = [
   },
 ]
 
-// 3. Storage Helpers
+// 3. Validation Helpers
+function isValidJob(job) {
+  return (
+    job &&
+    typeof job === 'object' &&
+    typeof job.id === 'string' &&
+    typeof job.title === 'string' &&
+    typeof job.customer === 'string' &&
+    typeof job.status === 'string'
+  )
+}
+
+function validateJobsBackup(backup) {
+  if (!backup || typeof backup !== 'object') {
+    return { isValid: false, message: 'Backup file is not a valid object.' }
+  }
+
+  if (backup.appId !== 'pwa-sample-job-tracker') {
+    return { isValid: false, message: 'Backup file is for a different app.' }
+  }
+
+  if (backup.schemaVersion !== 1) {
+    return { isValid: false, message: 'Backup file uses an unsupported schema version.' }
+  }
+
+  if (!Array.isArray(backup.jobs)) {
+    return { isValid: false, message: 'Backup file does not include a valid jobs list.' }
+  }
+
+  if (!backup.jobs.every(isValidJob)) {
+    return { isValid: false, message: 'Backup file includes invalid job records.' }
+  }
+
+  return { isValid: true, message: '' }
+}
+
+// 4. Storage Helpers
 function loadSavedJobs() {
   const storedJobs = window.localStorage.getItem(STORAGE_KEY)
 
@@ -97,7 +133,7 @@ function saveJobs(jobs) {
   window.localStorage.setItem(STORAGE_KEY, JSON.stringify(jobs))
 }
 
-// 4. Export Helpers
+// 5. Export Helpers
 function escapeCsvValue(value) {
   const stringValue = String(value ?? '')
 
@@ -164,7 +200,7 @@ function buildJobsBackup(jobs) {
   )
 }
 
-// 5. Formatting Helpers
+// 6. Formatting Helpers
 function formatCurrency(value) {
   const amount = Number(value)
 
@@ -178,7 +214,7 @@ function formatCurrency(value) {
   }).format(amount)
 }
 
-// 6. Small UI Helpers
+// 7. Small UI Helpers
 function StatusBadge({ status }) {
   return <span className="status-badge">{status}</span>
 }
@@ -246,7 +282,7 @@ function FutureAddOnCard({ item }) {
   )
 }
 
-// 7. Main App
+// 8. Main App
 function App() {
   const [jobs, setJobs] = useState(() => loadSavedJobs())
   const [formData, setFormData] = useState(initialFormState)
@@ -351,6 +387,45 @@ function App() {
       filename: 'job-tracker-backup.json',
       mimeType: 'application/json;charset=utf-8',
     })
+  }
+
+  function handleRestoreBackup(event) {
+    const file = event.target.files?.[0]
+
+    if (!file) {
+      return
+    }
+
+    const reader = new FileReader()
+
+    reader.onload = () => {
+      try {
+        const parsedBackup = JSON.parse(String(reader.result))
+        const validation = validateJobsBackup(parsedBackup)
+
+        if (!validation.isValid) {
+          window.alert(validation.message)
+          return
+        }
+
+        const shouldRestore = window.confirm(
+          'Restore this backup? This will replace the jobs currently saved in this browser.',
+        )
+
+        if (!shouldRestore) {
+          return
+        }
+
+        setJobs(parsedBackup.jobs)
+        window.alert('Job Tracker backup restored.')
+      } catch {
+        window.alert('Backup file could not be read as valid JSON.')
+      } finally {
+        event.target.value = ''
+      }
+    }
+
+    reader.readAsText(file)
   }
 
   return (
@@ -525,10 +600,14 @@ function App() {
           <button type="button">Print Job Report</button>
           <button type="button" onClick={handleExportCsv}>Export CSV</button>
           <button type="button" onClick={handleDownloadBackup}>Download JSON Backup</button>
+          <label className="file-button">
+            Restore JSON Backup
+            <input type="file" accept="application/json,.json" onChange={handleRestoreBackup} />
+          </label>
         </div>
 
         <p className="helper-text">
-          CSV export and JSON backup now download saved job records from this browser.
+          CSV export, JSON backup, and JSON restore now work with saved job records from this browser.
           Print logic will be added in a later slice.
         </p>
       </section>
