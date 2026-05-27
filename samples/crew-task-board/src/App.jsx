@@ -28,6 +28,8 @@ function App() {
     }
   })
   const [form, setForm] = useState(initialForm)
+  const doneTaskCount = tasks.filter((task) => task.status === 'Done').length
+  const openTaskCount = tasks.length - doneTaskCount
 
   useEffect(() => {
     localStorage.setItem(TASKS_STORAGE_KEY, JSON.stringify(tasks))
@@ -145,6 +147,21 @@ function App() {
             Save Task
           </button>
         </form>
+      </section>
+
+      <section className="summary-card" aria-label="Task summary">
+        <div>
+          <span>{tasks.length}</span>
+          <p>Total tasks</p>
+        </div>
+        <div>
+          <span>{openTaskCount}</span>
+          <p>Open tasks</p>
+        </div>
+        <div>
+          <span>{doneTaskCount}</span>
+          <p>Done tasks</p>
+        </div>
       </section>
 
       <section className="empty-state">
