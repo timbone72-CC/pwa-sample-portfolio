@@ -177,3 +177,20 @@ h2 {
   padding-top: 10px;
   border-top: 1px solid #d9e2ec;
 }
+
+.task-status-select {
+  width: 100%;
+  margin-top: 4px;
+  padding: 8px 10px;
+  border: 1px solid #c8d3df;
+  border-radius: 10px;
+  background: #ffffff;
+  color: #172033;
+  font: inherit;
+  font-weight: 800;
+}
+
+.task-status-select:focus {
+  outline: 3px solid #93b8f5;
+  border-color: #3563a8;
+}

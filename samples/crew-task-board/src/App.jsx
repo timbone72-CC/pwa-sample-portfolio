@@ -64,6 +64,14 @@ function App() {
     setForm(initialForm)
   }
 
+  function handleTaskStatusChange(taskId, nextStatus) {
+    setTasks((currentTasks) =>
+      currentTasks.map((task) =>
+        task.id === taskId ? { ...task, status: nextStatus } : task,
+      ),
+    )
+  }
+
   return (
     <main className="app-shell">
       <section className="hero-card">
@@ -160,7 +168,18 @@ function App() {
                   </div>
                   <div>
                     <dt>Status</dt>
-                    <dd>{task.status}</dd>
+                    <dd>
+                      <select
+                        aria-label={`Status for ${task.title}`}
+                        className="task-status-select"
+                        value={task.status}
+                        onChange={(event) => handleTaskStatusChange(task.id, event.target.value)}
+                      >
+                        <option>Not Started</option>
+                        <option>In Progress</option>
+                        <option>Done</option>
+                      </select>
+                    </dd>
                   </div>
                 </dl>
 
