@@ -2,7 +2,7 @@
 
 ## 1. Last Verified Head
 
-78ec003 Fix Job Tracker live demo link
+a417ba2 Update checkpoint after live demo link fix
 
 This value records the latest verified repository head before this checkpoint edit is committed.
 
@@ -71,6 +71,8 @@ Confirmed working:
 - stale Chrome PWA/manifest cache behavior identified and cleared during live testing
 - full-page Job Tracker screenshot added to README
 - Job Tracker portfolio section live-demo link corrected and verified from deployed files
+- old installed Chrome PWA removed after path fixes
+- clean Job Tracker PWA reinstall confirmed from corrected live URL
 
 ## 5. Current Job Tracker Features
 
