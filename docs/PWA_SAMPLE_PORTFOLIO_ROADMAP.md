@@ -34,6 +34,7 @@ Each sample app must define:
 7. Public demo URL
 8. Local source path
 9. Deployment path
+10. In-app portfolio link area
 
 ## 4. App Relationship Rule
 
@@ -48,7 +49,38 @@ The note should explain:
 
 These relationship notes are planning notes only unless real app-to-app communication is intentionally built later.
 
-## 5. Icon / Logo Rule
+## 5. Portfolio Link Rule
+
+Every public sample app should include a clear in-app portfolio link area.
+
+The link area should help a viewer move from one demo to the broader portfolio.
+
+Recommended placement:
+
+- About section
+- Help section
+- Settings section
+- simple footer area
+
+Recommended links:
+
+- portfolio home
+- FieldLedger case study
+- other sample apps
+- contact page or contractor profile
+
+The link area should not distract from the app's main workflow.
+
+During private development, placeholder link wording is allowed.
+
+Before public release, each visible portfolio link area should either:
+
+- use real working links
+- or clearly say that the public portfolio links will be connected before publishing
+
+Each future sample should include this same pattern so every app can point back to the portfolio and forward to related demos.
+
+## 6. Icon / Logo Rule
 
 Each sample PWA must have its own unique saved-app logo/icon before public install testing.
 
