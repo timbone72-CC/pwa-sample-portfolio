@@ -2,7 +2,7 @@
 
 ## 1. Last Verified Head
 
-6cd6c0f Fix Job Tracker favicon path
+7d866d2 Add Job Tracker README screenshot
 
 This value records the latest verified repository head before this checkpoint edit is committed.
 
@@ -69,6 +69,7 @@ Confirmed working:
 - manifest icon path corrected for GitHub Pages subpath
 - HTML favicon path corrected for GitHub Pages subpath
 - stale Chrome PWA/manifest cache behavior identified and cleared during live testing
+- full-page Job Tracker screenshot added to README
 
 ## 5. Current Job Tracker Features
 
@@ -111,4 +112,4 @@ After safe completed slices:
 
 Next likely step:
 
-Add screenshots to README and run a final mobile/desktop visual pass.
+Run a final mobile/desktop visual pass for the live Job Tracker demo.
