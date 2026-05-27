@@ -1,5 +1,7 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import './App.css'
+
+const TASKS_STORAGE_KEY = 'crew-task-board.tasks'
 
 const initialForm = {
   title: '',
@@ -10,8 +12,26 @@ const initialForm = {
 }
 
 function App() {
-  const [tasks, setTasks] = useState([])
+  const [tasks, setTasks] = useState(() => {
+    const savedTasks = localStorage.getItem(TASKS_STORAGE_KEY)
+
+    if (!savedTasks) {
+      return []
+    }
+
+    try {
+      const parsedTasks = JSON.parse(savedTasks)
+
+      return Array.isArray(parsedTasks) ? parsedTasks : []
+    } catch {
+      return []
+    }
+  })
   const [form, setForm] = useState(initialForm)
+
+  useEffect(() => {
+    localStorage.setItem(TASKS_STORAGE_KEY, JSON.stringify(tasks))
+  }, [tasks])
 
   function handleFieldChange(event) {
     const { name, value } = event.target
