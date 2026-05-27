@@ -670,9 +670,21 @@ function App() {
         </div>
 
         <p className="helper-text">
-          Public portfolio, FieldLedger case study, other sample app, and contact links
-          will be connected before this sample is published.
+          This sample is part of a small-business PWA portfolio focused on simple,
+          mobile-friendly tools that can run without a backend or login.
         </p>
+
+        <div className="link-grid">
+          <a href="https://github.com/timbone72-CC/fieldledger" target="_blank" rel="noreferrer">
+            FieldLedger proof-of-work
+          </a>
+          <a href="https://github.com/timbone72-CC/pwa-sample-portfolio" target="_blank" rel="noreferrer">
+            PWA sample portfolio source
+          </a>
+          <a href="mailto:timbone72@gmail.com">
+            Contact: timbone72@gmail.com
+          </a>
+        </div>
       </section>
     </main>
   )
