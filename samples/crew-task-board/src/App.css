@@ -126,3 +126,54 @@ h2 {
     min-width: 160px;
   }
 }
+
+.task-list {
+  display: grid;
+  gap: 14px;
+}
+
+.task-card {
+  display: grid;
+  gap: 12px;
+  padding: 16px;
+  border: 1px solid #d9e2ec;
+  border-radius: 16px;
+  background: #f8fafc;
+}
+
+.task-card h3 {
+  margin: 0 0 6px;
+  font-size: 1.1rem;
+}
+
+.task-card p {
+  margin: 0;
+  color: #526173;
+  line-height: 1.45;
+}
+
+.task-card dl {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+  margin: 0;
+}
+
+.task-card dt {
+  color: #526173;
+  font-size: 0.75rem;
+  font-weight: 800;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.task-card dd {
+  margin: 3px 0 0;
+  color: #172033;
+  font-weight: 800;
+}
+
+.task-notes {
+  padding-top: 10px;
+  border-top: 1px solid #d9e2ec;
+}

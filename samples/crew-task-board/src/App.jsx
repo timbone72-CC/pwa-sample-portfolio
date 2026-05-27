@@ -1,6 +1,49 @@
+import { useState } from 'react'
 import './App.css'
 
+const initialForm = {
+  title: '',
+  assignee: '',
+  priority: 'Normal',
+  status: 'Not Started',
+  notes: '',
+}
+
 function App() {
+  const [tasks, setTasks] = useState([])
+  const [form, setForm] = useState(initialForm)
+
+  function handleFieldChange(event) {
+    const { name, value } = event.target
+
+    setForm((currentForm) => ({
+      ...currentForm,
+      [name]: value,
+    }))
+  }
+
+  function handleSaveTask(event) {
+    event.preventDefault()
+
+    const title = form.title.trim()
+
+    if (!title) {
+      return
+    }
+
+    const nextTask = {
+      id: crypto.randomUUID(),
+      title,
+      assignee: form.assignee.trim(),
+      priority: form.priority,
+      status: form.status,
+      notes: form.notes.trim(),
+    }
+
+    setTasks((currentTasks) => [nextTask, ...currentTasks])
+    setForm(initialForm)
+  }
+
   return (
     <main className="app-shell">
       <section className="hero-card">
@@ -14,20 +57,32 @@ function App() {
       <section className="form-card" aria-labelledby="task-form-title">
         <h2 id="task-form-title">Add crew task</h2>
 
-        <form className="task-form">
+        <form className="task-form" onSubmit={handleSaveTask}>
           <label>
             Task title
-            <input type="text" name="title" placeholder="Load pipe trailer" />
+            <input
+              type="text"
+              name="title"
+              placeholder="Load pipe trailer"
+              value={form.title}
+              onChange={handleFieldChange}
+            />
           </label>
 
           <label>
             Assigned to
-            <input type="text" name="assignee" placeholder="Crew member name" />
+            <input
+              type="text"
+              name="assignee"
+              placeholder="Crew member name"
+              value={form.assignee}
+              onChange={handleFieldChange}
+            />
           </label>
 
           <label>
             Priority
-            <select name="priority" defaultValue="Normal">
+            <select name="priority" value={form.priority} onChange={handleFieldChange}>
               <option>Low</option>
               <option>Normal</option>
               <option>High</option>
@@ -36,7 +91,7 @@ function App() {
 
           <label>
             Status
-            <select name="status" defaultValue="Not Started">
+            <select name="status" value={form.status} onChange={handleFieldChange}>
               <option>Not Started</option>
               <option>In Progress</option>
               <option>Done</option>
@@ -45,20 +100,55 @@ function App() {
 
           <label>
             Notes
-            <textarea name="notes" rows="4" placeholder="Add task details or safety notes" />
+            <textarea
+              name="notes"
+              rows="4"
+              placeholder="Add task details or safety notes"
+              value={form.notes}
+              onChange={handleFieldChange}
+            />
           </label>
 
-          <button className="primary-button" type="button">
+          <button className="primary-button" type="submit">
             Save Task
           </button>
         </form>
       </section>
 
       <section className="empty-state">
-        <h2>No tasks yet</h2>
-        <p>
-          Saved crew tasks will appear here with assignee, priority, status, and notes.
-        </p>
+        <h2>{tasks.length === 0 ? 'No tasks yet' : 'Saved tasks'}</h2>
+
+        {tasks.length === 0 ? (
+          <p>
+            Saved crew tasks will appear here with assignee, priority, status, and notes.
+          </p>
+        ) : (
+          <div className="task-list">
+            {tasks.map((task) => (
+              <article className="task-card" key={task.id}>
+                <div>
+                  <h3>{task.title}</h3>
+                  <p>
+                    {task.assignee ? `Assigned to ${task.assignee}` : 'Unassigned'}
+                  </p>
+                </div>
+
+                <dl>
+                  <div>
+                    <dt>Priority</dt>
+                    <dd>{task.priority}</dd>
+                  </div>
+                  <div>
+                    <dt>Status</dt>
+                    <dd>{task.status}</dd>
+                  </div>
+                </dl>
+
+                {task.notes ? <p className="task-notes">{task.notes}</p> : null}
+              </article>
+            ))}
+          </div>
+        )}
       </section>
     </main>
   )
