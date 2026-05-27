@@ -2,7 +2,7 @@
 
 ## 1. Last Verified Head
 
-a417ba2 Update checkpoint after live demo link fix
+dc36eb9 Update checkpoint after installed PWA reinstall
 
 This value records the latest verified repository head before this checkpoint edit is committed.
 
@@ -73,6 +73,8 @@ Confirmed working:
 - Job Tracker portfolio section live-demo link corrected and verified from deployed files
 - old installed Chrome PWA removed after path fixes
 - clean Job Tracker PWA reinstall confirmed from corrected live URL
+- final installed app check confirmed working
+- Job Tracker live-demo link opens the same corrected live app
 
 ## 5. Current Job Tracker Features
 
@@ -115,4 +117,4 @@ After safe completed slices:
 
 Next likely step:
 
-Run a final mobile/desktop visual pass for the live Job Tracker demo.
+Decide whether to pause Job Tracker or start the next sample app.
