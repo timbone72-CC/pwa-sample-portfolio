@@ -2,7 +2,7 @@
 
 ## 1. Last Verified Head
 
-e547a1c Connect Job Tracker portfolio links
+6cd6c0f Fix Job Tracker favicon path
 
 This value records the latest verified repository head before this checkpoint edit is committed.
 
@@ -65,6 +65,10 @@ Confirmed working:
 - real PWA sample portfolio repository link connected
 - public contact email connected
 - production service worker registration path corrected for GitHub Pages subpath
+- manifest start_url corrected for GitHub Pages subpath
+- manifest icon path corrected for GitHub Pages subpath
+- HTML favicon path corrected for GitHub Pages subpath
+- stale Chrome PWA/manifest cache behavior identified and cleared during live testing
 
 ## 5. Current Job Tracker Features
 
