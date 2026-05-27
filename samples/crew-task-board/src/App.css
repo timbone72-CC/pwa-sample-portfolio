@@ -194,3 +194,27 @@ h2 {
   outline: 3px solid #93b8f5;
   border-color: #3563a8;
 }
+
+.delete-button {
+  width: 100%;
+  padding: 11px 14px;
+  border: 1px solid #d95f5f;
+  border-radius: 12px;
+  background: #fff5f5;
+  color: #9f1d1d;
+  font: inherit;
+  font-weight: 800;
+  cursor: pointer;
+}
+
+.delete-button:focus-visible {
+  outline: 3px solid #f3abab;
+  outline-offset: 3px;
+}
+
+@media (min-width: 720px) {
+  .delete-button {
+    width: auto;
+    justify-self: start;
+  }
+}

@@ -72,6 +72,10 @@ function App() {
     )
   }
 
+  function handleDeleteTask(taskId) {
+    setTasks((currentTasks) => currentTasks.filter((task) => task.id !== taskId))
+  }
+
   return (
     <main className="app-shell">
       <section className="hero-card">
@@ -184,6 +188,14 @@ function App() {
                 </dl>
 
                 {task.notes ? <p className="task-notes">{task.notes}</p> : null}
+
+                <button
+                  className="delete-button"
+                  type="button"
+                  onClick={() => handleDeleteTask(task.id)}
+                >
+                  Delete Task
+                </button>
               </article>
             ))}
           </div>
