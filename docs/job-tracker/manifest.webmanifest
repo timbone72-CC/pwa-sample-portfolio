@@ -2,13 +2,13 @@
   "name": "Job Tracker PWA Sample",
   "short_name": "Job Tracker",
   "description": "A lightweight small-business Job Tracker PWA sample.",
-  "start_url": "/",
+  "start_url": "/pwa-sample-portfolio/job-tracker/",
   "display": "standalone",
   "background_color": "#f3f6fb",
   "theme_color": "#2563eb",
   "icons": [
     {
-      "src": "/favicon.svg",
+      "src": "/pwa-sample-portfolio/job-tracker/favicon.svg",
       "sizes": "any",
       "type": "image/svg+xml",
       "purpose": "any maskable"
