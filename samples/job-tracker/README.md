@@ -6,7 +6,11 @@ Job Tracker is a lightweight sample PWA for small-business job tracking.
 
 It demonstrates how a simple mobile-friendly app can track jobs, save records locally, export data, download backups, restore backups, and print a basic report without requiring a backend or login system.
 
-## 2. What Works Now
+## 2. Screenshot
+
+![Job Tracker full-page screenshot](screenshots/job-tracker-full-page.png)
+
+## 3. What Works Now
 
 Current working features:
 
@@ -23,7 +27,7 @@ Current working features:
 - help section
 - future add-on preview cards
 
-## 3. Local-First Behavior
+## 4. Local-First Behavior
 
 This sample stores job records in the browser's local storage.
 
@@ -31,7 +35,7 @@ There is no backend, login system, cloud database, or account system in this ver
 
 Data is local to the browser/device unless exported or backed up by the user.
 
-## 4. Future Add-On Examples
+## 5. Future Add-On Examples
 
 The app shows future add-ons as roadmap previews only.
 
@@ -47,7 +51,7 @@ Possible future add-ons:
 
 Inactive features must stay clearly labeled as future, planned, or optional.
 
-## 5. Development Commands
+## 6. Development Commands
 
 Install dependencies:
 
@@ -61,7 +65,7 @@ Build check:
 
     npm run build
 
-## 6. Portfolio Role
+## 7. Portfolio Role
 
 This sample is part of the PWA Sample Portfolio.
 
