@@ -2,7 +2,7 @@
 
 ## 1. Last Verified Head
 
-158e47a Deploy Job Tracker demo to GitHub Pages docs
+e547a1c Connect Job Tracker portfolio links
 
 This value records the latest verified repository head before this checkpoint edit is committed.
 
@@ -61,6 +61,10 @@ Confirmed working:
 - live Job Tracker URL confirmed working
 - production service worker registration confirmed in Chrome DevTools
 - live Job Tracker offline reload confirmed working
+- real FieldLedger repository link connected
+- real PWA sample portfolio repository link connected
+- public contact email connected
+- production service worker registration path corrected for GitHub Pages subpath
 
 ## 5. Current Job Tracker Features
 
@@ -78,7 +82,7 @@ Current working Job Tracker features:
 - browser print report
 - help section
 - future add-on cards
-- portfolio link section prepared but not publicly connected yet
+- portfolio link section connected with real public links
 - PWA metadata configured
 - service worker configured for GitHub Pages subpath
 - public live demo available at https://timbone72-cc.github.io/pwa-sample-portfolio/job-tracker/
@@ -103,4 +107,4 @@ After safe completed slices:
 
 Next likely step:
 
-Add screenshots and real portfolio/contact links for the live Job Tracker demo.
+Add screenshots to README and run a final mobile/desktop visual pass.
