@@ -2,7 +2,7 @@
 
 ## 1. Last Verified Head
 
-162e122 Update checkpoint after current head fix
+158e47a Deploy Job Tracker demo to GitHub Pages docs
 
 This value records the latest verified repository head before this checkpoint edit is committed.
 
@@ -56,6 +56,9 @@ Confirmed working:
 - Job Tracker README documented
 - repo connected to GitHub
 - current work pushed to origin/main
+- Job Tracker live demo deployed to GitHub Pages
+- GitHub Pages enabled from main branch /docs folder
+- live Job Tracker URL confirmed working
 
 ## 5. Current Job Tracker Features
 
@@ -74,6 +77,9 @@ Current working Job Tracker features:
 - help section
 - future add-on cards
 - portfolio link section prepared but not publicly connected yet
+- PWA metadata configured
+- service worker configured for GitHub Pages subpath
+- public live demo available at https://timbone72-cc.github.io/pwa-sample-portfolio/job-tracker/
 
 ## 6. Current Rules
 
@@ -95,4 +101,4 @@ After safe completed slices:
 
 Next likely step:
 
-Review the Job Tracker sample for public-readiness gaps before adding more features.
+Run production PWA/offline behavior testing for the live Job Tracker demo.
