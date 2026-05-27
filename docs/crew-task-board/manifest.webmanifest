@@ -1,0 +1,18 @@
+{
+  "name": "Crew Task Board",
+  "short_name": "Crew Board",
+  "description": "A lightweight task board for crew leads, foremen, and small team managers.",
+  "start_url": "/pwa-sample-portfolio/crew-task-board/",
+  "scope": "/pwa-sample-portfolio/crew-task-board/",
+  "display": "standalone",
+  "background_color": "#eef3f8",
+  "theme_color": "#1f5fbf",
+  "icons": [
+    {
+      "src": "/pwa-sample-portfolio/crew-task-board/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ]
+}
