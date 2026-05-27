@@ -59,6 +59,8 @@ Confirmed working:
 - Job Tracker live demo deployed to GitHub Pages
 - GitHub Pages enabled from main branch /docs folder
 - live Job Tracker URL confirmed working
+- production service worker registration confirmed in Chrome DevTools
+- live Job Tracker offline reload confirmed working
 
 ## 5. Current Job Tracker Features
 
@@ -101,4 +103,4 @@ After safe completed slices:
 
 Next likely step:
 
-Run production PWA/offline behavior testing for the live Job Tracker demo.
+Add screenshots and real portfolio/contact links for the live Job Tracker demo.
