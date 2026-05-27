@@ -1,16 +1,14 @@
 # PWA Sample Portfolio Current State
 
-## 1. Last Verified Head
+## 1. Current Safe Head
 
-dc36eb9 Update checkpoint after installed PWA reinstall
-
-This value records the latest verified repository head before this checkpoint edit is committed.
+46b0176 Deploy Crew Task Board demo to GitHub Pages docs
 
 ## 2. Project
 
 Project name:
 
-PWA Sample Portfolio
+pwa-sample-portfolio
 
 Local path:
 
@@ -24,97 +22,81 @@ Branch:
 
 main
 
-## 3. Current Focus
+GitHub Pages source:
 
-Current focus:
+main branch, /docs folder
 
-Build a private reusable portfolio system for lightweight small-business PWA samples.
+## 3. Confirmed Live Samples
 
-FieldLedger remains the flagship proof-of-work.
+### 3.1 Job Tracker
 
-The first generic sample app is:
+Status:
 
-Job Tracker PWA
+Complete first public demo.
 
-## 4. Confirmed Working State
+Live URL:
+
+https://timbone72-cc.github.io/pwa-sample-portfolio/job-tracker/
+
+Last confirmed stable checkpoint:
+
+3bcf2ef Update checkpoint after final install check
+
+### 3.2 Crew Task Board
+
+Status:
+
+Second public demo built, deployed, installed, and offline-tested.
+
+Live URL:
+
+https://timbone72-cc.github.io/pwa-sample-portfolio/crew-task-board/
+
+Local source path:
+
+samples/crew-task-board
+
+Deployment path:
+
+docs/crew-task-board
 
 Confirmed working:
 
-- initial planning contracts created
-- FieldLedger case study draft created
-- Job Tracker requirements contract created
-- Job Tracker React/Vite app scaffolded
-- static Job Tracker shell created
-- app shell styling added
-- Add Job form added
-- local browser storage records added
-- CSV export added
-- JSON backup download added
-- JSON backup restore with validation added
-- printable report added
-- Help section added
-- Job Tracker README documented
-- repo connected to GitHub
-- current work pushed to origin/main
-- Job Tracker live demo deployed to GitHub Pages
-- GitHub Pages enabled from main branch /docs folder
-- live Job Tracker URL confirmed working
-- production service worker registration confirmed in Chrome DevTools
-- live Job Tracker offline reload confirmed working
-- real FieldLedger repository link connected
-- real PWA sample portfolio repository link connected
-- public contact email connected
-- production service worker registration path corrected for GitHub Pages subpath
-- manifest start_url corrected for GitHub Pages subpath
-- manifest icon path corrected for GitHub Pages subpath
-- HTML favicon path corrected for GitHub Pages subpath
-- stale Chrome PWA/manifest cache behavior identified and cleared during live testing
-- full-page Job Tracker screenshot added to README
-- Job Tracker portfolio section live-demo link corrected and verified from deployed files
-- old installed Chrome PWA removed after path fixes
-- clean Job Tracker PWA reinstall confirmed from corrected live URL
-- final installed app check confirmed working
-- Job Tracker live-demo link opens the same corrected live app
+- live demo loads
+- add task works
+- refresh persistence works
+- status persistence works
+- delete persistence works
+- task summary counts update correctly
+- installed PWA uses its own name and icon
+- installed app opens directly to Crew Task Board
+- offline app shell reload works
+- saved task remains offline through localStorage
 
-## 5. Current Job Tracker Features
+## 4. Locked Portfolio Direction
 
-Current working Job Tracker features:
+The portfolio is a collection of lightweight, mobile-friendly workflow PWAs for real small-business, field work, crew, service, contractor, and owner/operator workflows.
 
-- mobile-friendly layout
-- dashboard summary
-- add job form
-- saved jobs list
-- delete job
-- local storage persistence
-- CSV export
-- JSON backup download
-- JSON backup restore
-- browser print report
-- help section
-- future add-on cards
-- portfolio link section connected with real public links
-- PWA metadata configured
-- service worker configured for GitHub Pages subpath
-- public live demo available at https://timbone72-cc.github.io/pwa-sample-portfolio/job-tracker/
+Do not invent new sample apps midstream.
 
-## 6. Current Rules
+Build from the already-chosen marketable workflow list unless the roadmap is intentionally revised.
 
-Keep this project separate from FieldLedger.
+## 5. Sample App Icon Rule
 
-Do not expose unfinished sample work publicly.
+Each sample PWA must have its own unique saved-app logo/icon before public install testing.
 
-Build one focused slice at a time.
+Preferred pattern:
 
-After safe completed slices:
+- samples/<sample-id>/public/favicon.svg
+- samples/<sample-id>/public/manifest.webmanifest
 
-- test
-- check status
-- commit
-- push
-- confirm clean status
+Do not reuse the same favicon/logo across all samples.
 
-## 7. Next Likely Step
+## 6. Next Best Step
 
-Next likely step:
+Commit this checkpoint.
 
-Decide whether to pause Job Tracker or start the next sample app.
+After that, decide whether to:
+
+1. polish Crew Task Board live details, or
+2. begin the next already-planned marketable sample.
