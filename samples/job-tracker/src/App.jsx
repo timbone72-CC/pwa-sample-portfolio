@@ -678,8 +678,8 @@ function App() {
           <a href="https://github.com/timbone72-CC/fieldledger" target="_blank" rel="noreferrer">
             FieldLedger proof-of-work
           </a>
-          <a href="https://github.com/timbone72-CC/pwa-sample-portfolio" target="_blank" rel="noreferrer">
-            PWA sample portfolio source
+          <a href="https://timbone72-cc.github.io/pwa-sample-portfolio/job-tracker/" target="_blank" rel="noreferrer">
+            Job Tracker live demo
           </a>
           <a href="mailto:timbone72@gmail.com">
             Contact: timbone72@gmail.com
