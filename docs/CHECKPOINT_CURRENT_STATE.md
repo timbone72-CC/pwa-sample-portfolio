@@ -2,7 +2,7 @@
 
 ## 1. Current Safe Head
 
-be1465d Add Service Call Log sample brief
+7e441f1 Deploy Service Call Log demo to GitHub Pages docs
 
 ## 2. Project
 
@@ -167,16 +167,30 @@ Preferred pattern:
 
 Do not reuse the same favicon/logo across all samples.
 
-## 6. Service Call Log Planning
+## 6. Service Call Log
 
-Service Call Log planning has started.
+Service Call Log is deployed and live-validated.
+
+Live URL:
+
+https://timbone72-cc.github.io/pwa-sample-portfolio/service-call-log/
 
 Confirmed:
 
-- roadmap Next Best Step now points to Sample 5 — Service Call Log
-- sample brief created at `samples/service-call-log/SAMPLE_BRIEF.md`
-- no app shell files created yet
-- no deployed demo exists yet
+- sample brief exists at `samples/service-call-log/SAMPLE_BRIEF.md`
+- app shell exists at `samples/service-call-log`
+- GitHub Pages copy exists at `docs/service-call-log`
+- local build passed
+- local browser workflow passed
+- live URL returned HTTP 200
+- live page loads
+- add service call works
+- saved call appears
+- refresh persistence works
+- Job Tracker demo link works
+- Crew Task Board demo link works
+- Equipment Check Log demo link works
+- Quote Builder demo link works
 
 ## 7. Next Best Step
 
