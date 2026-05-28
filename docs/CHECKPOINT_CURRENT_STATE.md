@@ -2,7 +2,7 @@
 
 ## 1. Current Safe Head
 
-34f5970 Add Equipment Check Log app shell
+986235d Deploy Equipment Check Log demo to GitHub Pages docs
 
 ## 2. Project
 
@@ -78,11 +78,11 @@ Confirmed working:
 
 Status:
 
-Third sample local app shell built and locally tested.
+Third public demo built, deployed, and live-tested.
 
 Live URL:
 
-Not deployed yet.
+https://timbone72-cc.github.io/pwa-sample-portfolio/equipment-check-log/
 
 Local source path:
 
@@ -103,6 +103,10 @@ Confirmed working:
 - service worker registration path points to Equipment Check Log subpath
 - unique sample icon files are present
 - portfolio link area is present
+- Crew Task Board demo link works from the live Equipment Check Log app
+- Job Tracker demo link works from the live Equipment Check Log app
+- refresh persistence works in the live demo
+- add equipment check works in the live demo
 
 
 ## 4. Locked Portfolio Direction
