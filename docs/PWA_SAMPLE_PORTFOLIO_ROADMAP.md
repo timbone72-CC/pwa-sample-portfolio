@@ -423,8 +423,8 @@ For each sample:
 
 ## 11. Next Best Step
 
-Build Sample 2:
+Build Sample 3:
 
-Crew Task Board.
+Equipment Check Log.
 
 Do not start app files until this roadmap is committed and the repo is clean.
