@@ -164,6 +164,16 @@ function App() {
         </div>
       </section>
 
+      <section className="portfolio-card" aria-labelledby="portfolio-links-title">
+        <h2 id="portfolio-links-title">Related sample app</h2>
+        <p>
+          Crew Task Board can stand alone, but it pairs naturally with Job Tracker.
+        </p>
+        <a href="/pwa-sample-portfolio/job-tracker/">
+          View Job Tracker demo
+        </a>
+      </section>
+
       <section className="empty-state">
         <h2>{tasks.length === 0 ? 'No tasks yet' : 'Saved tasks'}</h2>
 
