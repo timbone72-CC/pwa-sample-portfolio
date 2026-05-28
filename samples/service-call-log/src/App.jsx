@@ -271,6 +271,7 @@ function App() {
           real app-to-app communication is intentionally built later.
         </p>
         <div className="portfolio-links">
+          <a href="/pwa-sample-portfolio/">Portfolio home</a>
           <a href="/pwa-sample-portfolio/job-tracker/">Job Tracker</a>
           <a href="/pwa-sample-portfolio/crew-task-board/">Crew Task Board</a>
           <a href="/pwa-sample-portfolio/equipment-check-log/">Equipment Check Log</a>
