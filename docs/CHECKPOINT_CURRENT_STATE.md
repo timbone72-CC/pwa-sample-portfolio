@@ -2,7 +2,7 @@
 
 ## 1. Current Safe Head
 
-914e44f Add Crew Task Board related sample link
+0b709a5 Update checkpoint after related sample link
 
 ## 2. Project
 
