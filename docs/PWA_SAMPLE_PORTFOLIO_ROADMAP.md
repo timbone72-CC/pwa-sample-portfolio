@@ -423,8 +423,8 @@ For each sample:
 
 ## 11. Next Best Step
 
-Build Sample 4:
+Build Sample 5:
 
-Quote Builder.
+Service Call Log.
 
-Do not start app files until this roadmap is committed and the repo is clean.
+Do not start app files until this roadmap update and the Service Call Log sample brief are committed and the repo is clean.
