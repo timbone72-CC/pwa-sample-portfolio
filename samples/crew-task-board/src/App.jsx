@@ -169,9 +169,12 @@ function App() {
         <p>
           Crew Task Board can stand alone, but it pairs naturally with Job Tracker.
         </p>
-        <a href="/pwa-sample-portfolio/job-tracker/">
-          View Job Tracker demo
-        </a>
+        <div className="portfolio-links">
+          <a href="/pwa-sample-portfolio/">Portfolio home</a>
+          <a href="/pwa-sample-portfolio/job-tracker/">
+            View Job Tracker demo
+          </a>
+        </div>
       </section>
 
       <section className="empty-state">
