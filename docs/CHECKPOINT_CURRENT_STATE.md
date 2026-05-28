@@ -2,7 +2,7 @@
 
 ## 1. Current Safe Head
 
-b481cdd Add Service Call Log portfolio home link
+bf6dabc Add Crew Task Board portfolio home link
 
 ## 2. Project
 
@@ -91,6 +91,10 @@ Confirmed working:
 - offline app shell reload works
 - saved task remains offline through localStorage
 - related Job Tracker demo link works from the live Crew Task Board app
+- Crew Task Board live retest passed after hard refresh cleared cached bundle
+- Crew Task Board local GitHub Pages-style path test passed
+- Crew Task Board related links are visually separated
+- Portfolio home link is present in Crew Task Board
 
 ### 3.3 Equipment Check Log
 
@@ -217,12 +221,12 @@ Confirmed:
 
 ## 7. Recent Commits
 
+bf6dabc Add Crew Task Board portfolio home link
+7e96b70 Update checkpoint after portfolio navigation polish
 b481cdd Add Service Call Log portfolio home link
 54f407d Add portfolio home page
 bc4d91a Update checkpoint after Service Call Log live validation
 7e441f1 Deploy Service Call Log demo to GitHub Pages docs
-6eca4da Add Service Call Log app shell
-53ee1ab Update checkpoint after Service Call Log brief
 
 ## 8. Next Best Step
 
@@ -231,6 +235,5 @@ Continue portfolio-wide navigation polish.
 Known remaining link gap:
 
 - Job Tracker needs a clear Portfolio home link
-- Crew Task Board needs a clear Portfolio home link
 
 Do not start the Client-Inspired Capstone yet.
