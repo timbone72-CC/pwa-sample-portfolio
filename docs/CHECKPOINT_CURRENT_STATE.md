@@ -2,7 +2,7 @@
 
 ## 1. Current Safe Head
 
-0b709a5 Update checkpoint after related sample link
+34f5970 Add Equipment Check Log app shell
 
 ## 2. Project
 
@@ -73,6 +73,37 @@ Confirmed working:
 - offline app shell reload works
 - saved task remains offline through localStorage
 - related Job Tracker demo link works from the live Crew Task Board app
+
+### 3.3 Equipment Check Log
+
+Status:
+
+Third sample local app shell built and locally tested.
+
+Live URL:
+
+Not deployed yet.
+
+Local source path:
+
+samples/equipment-check-log
+
+Deployment path:
+
+docs/equipment-check-log
+
+Confirmed working:
+
+- local Vite build passes
+- local dev app opens
+- add equipment check works
+- refresh persistence works through localStorage
+- Equipment Check Log identity is applied
+- GitHub Pages base path is configured for future deployment
+- service worker registration path points to Equipment Check Log subpath
+- unique sample icon files are present
+- portfolio link area is present
+
 
 ## 4. Locked Portfolio Direction
 
