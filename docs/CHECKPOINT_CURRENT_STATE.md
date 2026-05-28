@@ -2,7 +2,7 @@
 
 ## 1. Current Safe Head
 
-123a84c Add Quote Builder app shell
+6709f8f Deploy Quote Builder demo to GitHub Pages docs
 
 ## 2. Project
 
@@ -112,11 +112,11 @@ Confirmed working:
 
 Status:
 
-Fourth sample local app shell built and locally tested.
+Fourth public demo built, deployed, and live-tested.
 
 Live URL:
 
-Not deployed yet.
+https://timbone72-cc.github.io/pwa-sample-portfolio/quote-builder/
 
 Local source path:
 
@@ -138,6 +138,13 @@ Confirmed working:
 - service worker registration path points to Quote Builder subpath
 - unique sample icon files are present
 - portfolio link area is present
+- live demo loads
+- add quote works in the live demo
+- quote total calculates correctly in the live demo
+- refresh persistence works in the live demo
+- Job Tracker demo link works from the live Quote Builder app
+- Crew Task Board demo link works from the live Quote Builder app
+- Equipment Check Log demo link works from the live Quote Builder app
 
 
 
