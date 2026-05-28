@@ -1,0 +1,18 @@
+{
+  "name": "Quote Builder",
+  "short_name": "Quotes",
+  "description": "A lightweight quote builder for contractors, estimators, service providers, and small business owners.",
+  "start_url": "/pwa-sample-portfolio/quote-builder/",
+  "scope": "/pwa-sample-portfolio/quote-builder/",
+  "display": "standalone",
+  "background_color": "#eef3f8",
+  "theme_color": "#1f5fbf",
+  "icons": [
+    {
+      "src": "/pwa-sample-portfolio/quote-builder/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ]
+}
