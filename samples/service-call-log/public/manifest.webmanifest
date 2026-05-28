@@ -1,0 +1,18 @@
+{
+  "name": "Service Call Log",
+  "short_name": "Service Log",
+  "description": "A lightweight service call tracker for technicians, dispatchers, and small service businesses.",
+  "start_url": "/pwa-sample-portfolio/service-call-log/",
+  "scope": "/pwa-sample-portfolio/service-call-log/",
+  "display": "standalone",
+  "background_color": "#eef3f8",
+  "theme_color": "#1f5fbf",
+  "icons": [
+    {
+      "src": "/pwa-sample-portfolio/service-call-log/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ]
+}
