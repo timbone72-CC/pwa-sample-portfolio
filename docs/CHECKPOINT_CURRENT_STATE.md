@@ -2,7 +2,7 @@
 
 ## 1. Current Safe Head
 
-46b0176 Deploy Crew Task Board demo to GitHub Pages docs
+914e44f Add Crew Task Board related sample link
 
 ## 2. Project
 
@@ -72,6 +72,7 @@ Confirmed working:
 - installed app opens directly to Crew Task Board
 - offline app shell reload works
 - saved task remains offline through localStorage
+- related Job Tracker demo link works from the live Crew Task Board app
 
 ## 4. Locked Portfolio Direction
 
