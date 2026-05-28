@@ -2,7 +2,7 @@
 
 ## 1. Current Safe Head
 
-986235d Deploy Equipment Check Log demo to GitHub Pages docs
+123a84c Add Quote Builder app shell
 
 ## 2. Project
 
@@ -105,8 +105,40 @@ Confirmed working:
 - portfolio link area is present
 - Crew Task Board demo link works from the live Equipment Check Log app
 - Job Tracker demo link works from the live Equipment Check Log app
-- refresh persistence works in the live demo
 - add equipment check works in the live demo
+- refresh persistence works in the live demo
+
+### 3.4 Quote Builder
+
+Status:
+
+Fourth sample local app shell built and locally tested.
+
+Live URL:
+
+Not deployed yet.
+
+Local source path:
+
+samples/quote-builder
+
+Deployment path:
+
+docs/quote-builder
+
+Confirmed working:
+
+- local Vite build passes
+- local dev app opens
+- add quote works
+- quote total calculates correctly
+- refresh persistence works through localStorage
+- Quote Builder identity is applied
+- GitHub Pages base path is configured for future deployment
+- service worker registration path points to Quote Builder subpath
+- unique sample icon files are present
+- portfolio link area is present
+
 
 
 ## 4. Locked Portfolio Direction
