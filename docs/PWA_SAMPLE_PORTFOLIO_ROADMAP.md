@@ -423,8 +423,8 @@ For each sample:
 
 ## 11. Next Best Step
 
-Build Sample 3:
+Build Sample 4:
 
-Equipment Check Log.
+Quote Builder.
 
 Do not start app files until this roadmap is committed and the repo is clean.
