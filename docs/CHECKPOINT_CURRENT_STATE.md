@@ -2,7 +2,7 @@
 
 ## 1. Current Safe Head
 
-7e441f1 Deploy Service Call Log demo to GitHub Pages docs
+b481cdd Add Service Call Log portfolio home link
 
 ## 2. Project
 
@@ -25,6 +25,24 @@ main
 GitHub Pages source:
 
 main branch, /docs folder
+
+## 2.1 Portfolio Home Page
+
+Status:
+
+Public portfolio home page exists and is live.
+
+Live URL:
+
+https://timbone72-cc.github.io/pwa-sample-portfolio/
+
+Confirmed:
+
+- `docs/index.html` exists
+- local portfolio home page loads
+- live portfolio home page loads
+- all five live demo cards are linked
+- Client-Inspired Capstone remains reserved and not built early
 
 ## 3. Confirmed Live Samples
 
@@ -191,12 +209,28 @@ Confirmed:
 - Crew Task Board demo link works
 - Equipment Check Log demo link works
 - Quote Builder demo link works
+- Service Call Log live retest passed after portfolio home link fix
+- Service Call Log local GitHub Pages-style path test passed
+- Service Call Log related links are visually separated
+- Service Call Log metadata uses Service Call Log title, favicon, and manifest paths
+- Portfolio home link is present in Service Call Log
 
-## 7. Next Best Step
+## 7. Recent Commits
 
-Commit this checkpoint.
+b481cdd Add Service Call Log portfolio home link
+54f407d Add portfolio home page
+bc4d91a Update checkpoint after Service Call Log live validation
+7e441f1 Deploy Service Call Log demo to GitHub Pages docs
+6eca4da Add Service Call Log app shell
+53ee1ab Update checkpoint after Service Call Log brief
 
-After that, decide whether to:
+## 8. Next Best Step
 
-1. polish Crew Task Board live details, or
-2. begin the next already-planned marketable sample.
+Continue portfolio-wide navigation polish.
+
+Known remaining link gap:
+
+- Job Tracker needs a clear Portfolio home link
+- Crew Task Board needs a clear Portfolio home link
+
+Do not start the Client-Inspired Capstone yet.
