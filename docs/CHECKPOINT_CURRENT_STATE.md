@@ -2,7 +2,7 @@
 
 ## 1. Current Safe Head
 
-6709f8f Deploy Quote Builder demo to GitHub Pages docs
+be1465d Add Service Call Log sample brief
 
 ## 2. Project
 
@@ -167,7 +167,18 @@ Preferred pattern:
 
 Do not reuse the same favicon/logo across all samples.
 
-## 6. Next Best Step
+## 6. Service Call Log Planning
+
+Service Call Log planning has started.
+
+Confirmed:
+
+- roadmap Next Best Step now points to Sample 5 — Service Call Log
+- sample brief created at `samples/service-call-log/SAMPLE_BRIEF.md`
+- no app shell files created yet
+- no deployed demo exists yet
+
+## 7. Next Best Step
 
 Commit this checkpoint.
 
