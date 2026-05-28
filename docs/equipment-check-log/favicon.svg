@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" role="img" aria-labelledby="title desc">
+  <title id="title">Equipment Check Log</title>
+  <desc id="desc">A clipboard checklist icon for the Equipment Check Log sample PWA.</desc>
+  <rect width="128" height="128" rx="28" fill="#1f5fbf"/>
+  <rect x="30" y="24" width="68" height="82" rx="10" fill="#ffffff"/>
+  <rect x="45" y="16" width="38" height="18" rx="7" fill="#93b8f5"/>
+  <circle cx="46" cy="52" r="5" fill="#1f5fbf"/>
+  <path d="M58 52h26" stroke="#172033" stroke-width="7" stroke-linecap="round"/>
+  <circle cx="46" cy="72" r="5" fill="#1f5fbf"/>
+  <path d="M58 72h26" stroke="#172033" stroke-width="7" stroke-linecap="round"/>
+  <circle cx="46" cy="92" r="5" fill="#1f5fbf"/>
+  <path d="M58 92h18" stroke="#172033" stroke-width="7" stroke-linecap="round"/>
+</svg>
