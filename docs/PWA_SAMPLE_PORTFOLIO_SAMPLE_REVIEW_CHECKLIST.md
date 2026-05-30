@@ -95,7 +95,7 @@ The reviewer must check the real source app, the rebuilt deployment copy, and th
 - [ ] Read the real current `HEAD`.
 - [ ] Read the recent git log.
 - [ ] Update the checkpoint after live validation.
-- [ ] Confirm the checkpoint current safe head matches actual git `HEAD` after the checkpoint commit.
+- [ ] Confirm the checkpoint current safe head records the latest live-validated functional or project-control commit.
 - [ ] Rebuild recent checkpoint commits from the real git log instead of manually guessing them.
 - [ ] Confirm the checkpoint records only tested behavior as confirmed.
 - [ ] Confirm no final `complete` claim was made before the live GitHub Pages URL was tested after push.
@@ -118,7 +118,7 @@ Approval is blocked if any of these conditions remain:
 - the build fails
 - the deployed docs output is stale
 - the live GitHub Pages URL was not tested after push
-- the checkpoint current safe head does not match actual git `HEAD` after the checkpoint commit
+- the checkpoint current safe head points to an unvalidated, guessed, or stale commit
 - recent checkpoint commits were not rebuilt from real git log
 
 Do not approve the sample until every blocking condition is resolved.

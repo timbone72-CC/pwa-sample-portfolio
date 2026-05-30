@@ -98,7 +98,7 @@ A checkpoint update is done only when:
 
 1. The relevant source, deployment, and live-validation work is complete.
 2. `git log` is read after the deployment commit exists.
-3. The checkpoint current safe head matches the actual git `HEAD` after the checkpoint commit.
+3. The checkpoint current safe head records the latest live-validated functional or project-control commit, not an impossible self-referential hash.
 4. Recent commits are rebuilt from the real `git log`, not manually guessed.
 5. Confirmed behaviors are based on completed tests, not planned work.
 6. The checkpoint states the real next step.
@@ -127,7 +127,7 @@ one. Do not substitute Python `http.server` for normal source-app UI testing. Py
 
 The checkpoint must match repository reality:
 
-- current safe head matching actual git `HEAD` after the checkpoint commit
+- current safe head recording the latest live-validated functional or project-control commit
 - recent git log
 - deployed state
 - live-tested state
@@ -146,7 +146,7 @@ Do not call work complete when:
 - unexpected files are modified
 - the live URL was not tested after push
 - service-worker caching makes the live result uncertain
-- the checkpoint current safe head does not match actual git `HEAD` after the checkpoint commit
+- the checkpoint current safe head points to an unvalidated, guessed, or stale commit
 - recent checkpoint commits were not rebuilt from real `git log`
 
 Do not start the Client-Inspired Capstone until the portfolio sample-control work is intentionally closed.
