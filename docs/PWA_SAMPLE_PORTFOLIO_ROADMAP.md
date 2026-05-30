@@ -53,32 +53,17 @@ These relationship notes are planning notes only unless real app-to-app communic
 
 Every public sample app should include a clear in-app portfolio link area.
 
-The link area should help a viewer move from one demo to the broader portfolio.
+The current locked navigation rule is hub-only:
 
-Recommended placement:
+- visible sample-app navigation and About links should use the label `Portfolio home`
+- the `Portfolio home` link should point to `/pwa-sample-portfolio/`
+- sample apps should not link directly to other sample apps
+- sample apps should not include self-links in navigation or About areas
+- sample apps should not include GitHub, proof-of-work, or FieldLedger links inside sample-app navigation or About areas
 
-- About section
-- Help section
-- Settings section
-- simple footer area
+The portfolio home page is the hub for choosing demos and presenting broader proof-of-work links.
 
-Recommended links:
-
-- portfolio home
-- FieldLedger case study
-- other sample apps
-- contact page or contractor profile
-
-The link area should not distract from the app's main workflow.
-
-During private development, placeholder link wording is allowed.
-
-Before public release, each visible portfolio link area should either:
-
-- use real working links
-- or clearly say that the public portfolio links will be connected before publishing
-
-Each future sample should include this same pattern so every app can point back to the portfolio and forward to related demos.
+App relationship notes may still describe possible future workflow connections, but those notes are planning context only. They do not authorize app-to-app links inside sample apps.
 
 ## 6. Icon / Logo Rule
 
@@ -423,8 +408,13 @@ For each sample:
 
 ## 11. Next Best Step
 
-Build Sample 5:
+Pause new sample work.
 
-Service Call Log.
+Complete portfolio-wide review and cleanup before starting the Client-Inspired Capstone.
 
-Do not start app files until this roadmap update and the Service Call Log sample brief are committed and the repo is clean.
+Current priority:
+
+- keep the five existing samples stable
+- reconcile stale docs with the locked hub-only navigation rule
+- review offline app-shell behavior as a separate technical pass
+- do not start the Client-Inspired Capstone until sample-control work is intentionally closed
