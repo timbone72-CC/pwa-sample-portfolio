@@ -264,18 +264,13 @@ function App() {
       </section>
 
       <section className="portfolio-card" aria-labelledby="portfolio-links-title">
-        <p className="eyebrow">Related Samples</p>
-        <h2 id="portfolio-links-title">Explore the portfolio</h2>
+        <p className="eyebrow">Portfolio</p>
+        <h2 id="portfolio-links-title">Portfolio home</h2>
         <p>
-          Service Call Log is a standalone sample. These links are navigation only unless
-          real app-to-app communication is intentionally built later.
+          Return to the portfolio home to choose another sample app.
         </p>
         <div className="portfolio-links">
           <a href="/pwa-sample-portfolio/">Portfolio home</a>
-          <a href="/pwa-sample-portfolio/job-tracker/">Job Tracker</a>
-          <a href="/pwa-sample-portfolio/crew-task-board/">Crew Task Board</a>
-          <a href="/pwa-sample-portfolio/equipment-check-log/">Equipment Check Log</a>
-          <a href="/pwa-sample-portfolio/quote-builder/">Quote Builder</a>
         </div>
       </section>
     </main>

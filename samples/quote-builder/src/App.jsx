@@ -297,20 +297,16 @@ function App() {
         <div className="section-heading">
           <div>
             <p className="eyebrow">Portfolio Links</p>
-            <h2 id="portfolio-title">Related sample apps</h2>
+            <h2 id="portfolio-title">Portfolio home</h2>
           </div>
         </div>
 
         <p>
-          Quote Builder is a standalone sample. These links are navigation only, not
-          fake app-to-app integration.
+          Return to the portfolio home to choose another sample app.
         </p>
 
         <div className="link-grid">
           <a href="/pwa-sample-portfolio/">Portfolio home</a>
-          <a href="/pwa-sample-portfolio/job-tracker/">Job Tracker demo</a>
-          <a href="/pwa-sample-portfolio/crew-task-board/">Crew Task Board demo</a>
-          <a href="/pwa-sample-portfolio/equipment-check-log/">Equipment Check Log demo</a>
         </div>
       </section>
     </main>

@@ -165,15 +165,12 @@ function App() {
       </section>
 
       <section className="portfolio-card" aria-labelledby="portfolio-links-title">
-        <h2 id="portfolio-links-title">Related sample app</h2>
+        <h2 id="portfolio-links-title">Portfolio home</h2>
         <p>
-          Crew Task Board can stand alone, but it pairs naturally with Job Tracker.
+          Return to the portfolio home to choose another sample app.
         </p>
         <div className="portfolio-links">
           <a href="/pwa-sample-portfolio/">Portfolio home</a>
-          <a href="/pwa-sample-portfolio/job-tracker/">
-            View Job Tracker demo
-          </a>
         </div>
       </section>
 
