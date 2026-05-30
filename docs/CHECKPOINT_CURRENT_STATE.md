@@ -2,7 +2,7 @@
 
 ## 1. Current Safe Head
 
-4a77cae Simplify sample app portfolio navigation
+9b3cbbb Polish Crew Task Board portfolio sections
 
 ## 2. Project
 
@@ -103,6 +103,9 @@ Confirmed working:
 - Crew Task Board local GitHub Pages-style path test passed
 - Crew Task Board related links are visually separated
 - Portfolio home link is present in Crew Task Board
+- Crew Task Board now matches the Job Tracker-style Help / Future Options / About portfolio section format
+- Crew Task Board duplicate trailing portfolio CSS block was removed
+- Crew Task Board live GitHub Pages retest passed after section polish deploy
 
 ### 3.3 Equipment Check Log
 
