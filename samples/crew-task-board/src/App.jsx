@@ -164,10 +164,57 @@ function App() {
         </div>
       </section>
 
+      <section className="portfolio-card" aria-labelledby="sample-help-title">
+        <p className="eyebrow">Help</p>
+        <h2 id="sample-help-title">How this sample works</h2>
+        <div className="support-grid">
+          <div className="support-item">
+            <strong>1. Add a task</strong>
+            <p>Enter a task title, assignee, priority, status, and notes.</p>
+          </div>
+          <div className="support-item">
+            <strong>2. Save locally</strong>
+            <p>Tasks are saved in this browser only. No login, backend, or cloud database is used.</p>
+          </div>
+          <div className="support-item">
+            <strong>3. Track status</strong>
+            <p>Update each task as Not Started, In Progress, or Done.</p>
+          </div>
+          <div className="support-item">
+            <strong>4. Grow later</strong>
+            <p>Future add-ons show what could be added without pretending those features are active now.</p>
+          </div>
+        </div>
+      </section>
+
+      <section className="portfolio-card" aria-labelledby="future-options-title">
+        <p className="eyebrow">Future Options</p>
+        <h2 id="future-options-title">Clear roadmap previews</h2>
+        <div className="support-grid">
+          <div className="support-item">
+            <strong>Job Handoff</strong>
+            <span>Future Add-on</span>
+            <p>Turn assigned tasks into completed job records.</p>
+          </div>
+          <div className="support-item">
+            <strong>Equipment Issues</strong>
+            <span>Optional Module</span>
+            <p>Link crew tasks to equipment checks or maintenance notes.</p>
+          </div>
+          <div className="support-item">
+            <strong>Team Login</strong>
+            <span>Planned</span>
+            <p>Add separate crew and manager views in a later phase.</p>
+          </div>
+        </div>
+      </section>
+
       <section className="portfolio-card" aria-labelledby="portfolio-links-title">
-        <h2 id="portfolio-links-title">Portfolio home</h2>
+        <p className="eyebrow">About</p>
+        <h2 id="portfolio-links-title">Portfolio links</h2>
         <p>
-          Return to the portfolio home to choose another sample app.
+          This sample is part of a small-business PWA portfolio focused on simple, mobile-friendly tools that can run
+          without a backend or login.
         </p>
         <div className="portfolio-links">
           <a href="/pwa-sample-portfolio/">Portfolio home</a>
