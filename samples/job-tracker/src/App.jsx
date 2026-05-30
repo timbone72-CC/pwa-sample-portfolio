@@ -675,14 +675,8 @@ function App() {
         </p>
 
         <div className="link-grid">
-          <a href="https://github.com/timbone72-CC/fieldledger" target="_blank" rel="noreferrer">
-            FieldLedger proof-of-work
-          </a>
-          <a href="https://timbone72-cc.github.io/pwa-sample-portfolio/job-tracker/" target="_blank" rel="noreferrer">
-            Job Tracker live demo
-          </a>
-          <a href="mailto:timbone72@gmail.com">
-            Contact: timbone72@gmail.com
+          <a href="/pwa-sample-portfolio/">
+            Portfolio home
           </a>
         </div>
       </section>
