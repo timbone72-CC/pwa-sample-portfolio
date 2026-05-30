@@ -297,41 +297,46 @@ h2 {
   text-decoration: underline;
 }
 
-.portfolio-card {
-  width: min(100%, 720px);
-  margin: 0 auto 18px;
-  padding: 20px 22px;
+.support-grid {
+  display: grid;
+  gap: 12px;
+}
+
+.support-item {
+  padding: 16px;
   border: 1px solid #d9e2ec;
-  border-radius: 20px;
-  background: #ffffff;
-  box-shadow: 0 14px 34px rgba(23, 32, 51, 0.08);
+  border-radius: 16px;
+  background: #f8fafc;
+  text-align: center;
 }
 
-.portfolio-card h2 {
-  margin-bottom: 10px;
+.support-item strong {
+  display: block;
+  margin-bottom: 8px;
+  color: #172033;
 }
 
-.portfolio-card p {
-  margin-bottom: 12px;
-  color: #526173;
-  line-height: 1.5;
-}
-
-.portfolio-card a {
+.support-item span {
   display: inline-flex;
-  align-items: center;
-  min-height: 44px;
-  color: #1f5fbf;
+  margin-bottom: 10px;
+  border-radius: 999px;
+  padding: 5px 10px;
+  background: #eef3f8;
+  color: #243047;
+  font-size: 0.78rem;
   font-weight: 900;
-  text-decoration: none;
 }
 
-.portfolio-card a:focus-visible {
-  outline: 3px solid #93b8f5;
-  outline-offset: 3px;
-  border-radius: 8px;
+.support-item p {
+  margin: 0;
 }
 
-.portfolio-card a:hover {
-  text-decoration: underline;
+@media (min-width: 720px) {
+  .support-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .future-options-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
 }

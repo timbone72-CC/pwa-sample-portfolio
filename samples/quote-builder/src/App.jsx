@@ -293,18 +293,58 @@ function App() {
         )}
       </section>
 
-      <section className="panel" aria-labelledby="portfolio-title">
-        <div className="section-heading">
-          <div>
-            <p className="eyebrow">Portfolio Links</p>
-            <h2 id="portfolio-title">Portfolio home</h2>
+      <section className="portfolio-card" aria-labelledby="sample-help-title">
+        <p className="eyebrow">Help</p>
+        <h2 id="sample-help-title">How this sample works</h2>
+        <div className="support-grid">
+          <div className="support-item">
+            <strong>1. Describe the quote</strong>
+            <p>Enter the customer, service, quote date, and current status.</p>
+          </div>
+          <div className="support-item">
+            <strong>2. Add pricing</strong>
+            <p>Record labor, materials, trip charges, and any extra fees.</p>
+          </div>
+          <div className="support-item">
+            <strong>3. Save the quote</strong>
+            <p>Saved quotes stay in this browser with the calculated total and notes.</p>
+          </div>
+          <div className="support-item">
+            <strong>4. Grow later</strong>
+            <p>Future add-ons show possible next steps without implying those features are active now.</p>
           </div>
         </div>
+      </section>
 
+      <section className="portfolio-card" aria-labelledby="future-options-title">
+        <p className="eyebrow">Future Options</p>
+        <h2 id="future-options-title">Clear roadmap previews</h2>
+        <div className="support-grid future-options-grid">
+          <div className="support-item">
+            <strong>Line Items</strong>
+            <span>Future Add-on</span>
+            <p>Build quotes from reusable labor and material line items.</p>
+          </div>
+          <div className="support-item">
+            <strong>Customer Approval</strong>
+            <span>Optional Module</span>
+            <p>Prepare a customer review and approval step in a later phase.</p>
+          </div>
+          <div className="support-item">
+            <strong>Quote Templates</strong>
+            <span>Planned</span>
+            <p>Start common services from saved estimate templates.</p>
+          </div>
+        </div>
+      </section>
+
+      <section className="portfolio-card" aria-labelledby="portfolio-title">
+        <p className="eyebrow">About</p>
+        <h2 id="portfolio-title">Portfolio links</h2>
         <p>
-          Return to the portfolio home to choose another sample app.
+          This sample belongs to the PWA Sample Portfolio, a collection of focused,
+          mobile-friendly workflow examples.
         </p>
-
         <div className="link-grid">
           <a href="/pwa-sample-portfolio/">Portfolio home</a>
         </div>

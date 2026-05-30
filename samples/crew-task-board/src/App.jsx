@@ -164,6 +164,62 @@ function App() {
         </div>
       </section>
 
+      <section className="form-card" aria-labelledby="saved-tasks-title">
+        <p className="eyebrow">Saved Locally</p>
+        <h2 id="saved-tasks-title">{tasks.length === 0 ? 'No tasks yet' : 'Saved tasks'}</h2>
+
+        {tasks.length === 0 ? (
+          <p>
+            Saved crew tasks will appear here with assignee, priority, status, and notes.
+          </p>
+        ) : (
+          <div className="task-list">
+            {tasks.map((task) => (
+              <article className="task-card" key={task.id}>
+                <div>
+                  <h3>{task.title}</h3>
+                  <p>
+                    {task.assignee ? `Assigned to ${task.assignee}` : 'Unassigned'}
+                  </p>
+                </div>
+
+                <dl>
+                  <div>
+                    <dt>Priority</dt>
+                    <dd>{task.priority}</dd>
+                  </div>
+                  <div>
+                    <dt>Status</dt>
+                    <dd>
+                      <select
+                        aria-label={`Status for ${task.title}`}
+                        className="task-status-select"
+                        value={task.status}
+                        onChange={(event) => handleTaskStatusChange(task.id, event.target.value)}
+                      >
+                        <option>Not Started</option>
+                        <option>In Progress</option>
+                        <option>Done</option>
+                      </select>
+                    </dd>
+                  </div>
+                </dl>
+
+                {task.notes ? <p className="task-notes">{task.notes}</p> : null}
+
+                <button
+                  className="delete-button"
+                  type="button"
+                  onClick={() => handleDeleteTask(task.id)}
+                >
+                  Delete Task
+                </button>
+              </article>
+            ))}
+          </div>
+        )}
+      </section>
+
       <section className="portfolio-card" aria-labelledby="sample-help-title">
         <p className="eyebrow">Help</p>
         <h2 id="sample-help-title">How this sample works</h2>
@@ -221,60 +277,6 @@ function App() {
         </div>
       </section>
 
-      <section className="empty-state">
-        <h2>{tasks.length === 0 ? 'No tasks yet' : 'Saved tasks'}</h2>
-
-        {tasks.length === 0 ? (
-          <p>
-            Saved crew tasks will appear here with assignee, priority, status, and notes.
-          </p>
-        ) : (
-          <div className="task-list">
-            {tasks.map((task) => (
-              <article className="task-card" key={task.id}>
-                <div>
-                  <h3>{task.title}</h3>
-                  <p>
-                    {task.assignee ? `Assigned to ${task.assignee}` : 'Unassigned'}
-                  </p>
-                </div>
-
-                <dl>
-                  <div>
-                    <dt>Priority</dt>
-                    <dd>{task.priority}</dd>
-                  </div>
-                  <div>
-                    <dt>Status</dt>
-                    <dd>
-                      <select
-                        aria-label={`Status for ${task.title}`}
-                        className="task-status-select"
-                        value={task.status}
-                        onChange={(event) => handleTaskStatusChange(task.id, event.target.value)}
-                      >
-                        <option>Not Started</option>
-                        <option>In Progress</option>
-                        <option>Done</option>
-                      </select>
-                    </dd>
-                  </div>
-                </dl>
-
-                {task.notes ? <p className="task-notes">{task.notes}</p> : null}
-
-                <button
-                  className="delete-button"
-                  type="button"
-                  onClick={() => handleDeleteTask(task.id)}
-                >
-                  Delete Task
-                </button>
-              </article>
-            ))}
-          </div>
-        )}
-      </section>
     </main>
   )
 }

@@ -263,11 +263,57 @@ function App() {
         )}
       </section>
 
+      <section className="portfolio-card" aria-labelledby="sample-help-title">
+        <p className="eyebrow">Help</p>
+        <h2 id="sample-help-title">How this sample works</h2>
+        <div className="support-grid">
+          <div className="support-item">
+            <strong>1. Log the request</strong>
+            <p>Enter the customer, service location, issue summary, and call date.</p>
+          </div>
+          <div className="support-item">
+            <strong>2. Set priorities</strong>
+            <p>Choose the status, priority, and whether follow-up is needed.</p>
+          </div>
+          <div className="support-item">
+            <strong>3. Save the call</strong>
+            <p>Saved calls stay in this browser with issue details and notes.</p>
+          </div>
+          <div className="support-item">
+            <strong>4. Grow later</strong>
+            <p>Future add-ons show possible next steps without implying those features are active now.</p>
+          </div>
+        </div>
+      </section>
+
+      <section className="portfolio-card" aria-labelledby="future-options-title">
+        <p className="eyebrow">Future Options</p>
+        <h2 id="future-options-title">Clear roadmap previews</h2>
+        <div className="support-grid future-options-grid">
+          <div className="support-item">
+            <strong>Dispatch View</strong>
+            <span>Future Add-on</span>
+            <p>Organize service calls for a dispatcher review workflow.</p>
+          </div>
+          <div className="support-item">
+            <strong>Parts Notes</strong>
+            <span>Optional Module</span>
+            <p>Track parts requested or used during a service visit.</p>
+          </div>
+          <div className="support-item">
+            <strong>Customer Sign-off</strong>
+            <span>Planned</span>
+            <p>Prepare a completion acknowledgement step in a later phase.</p>
+          </div>
+        </div>
+      </section>
+
       <section className="portfolio-card" aria-labelledby="portfolio-links-title">
-        <p className="eyebrow">Portfolio</p>
-        <h2 id="portfolio-links-title">Portfolio home</h2>
+        <p className="eyebrow">About</p>
+        <h2 id="portfolio-links-title">Portfolio links</h2>
         <p>
-          Return to the portfolio home to choose another sample app.
+          This sample belongs to the PWA Sample Portfolio, a collection of focused,
+          mobile-friendly workflow examples.
         </p>
         <div className="portfolio-links">
           <a href="/pwa-sample-portfolio/">Portfolio home</a>
