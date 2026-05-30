@@ -2,7 +2,7 @@
 
 ## 1. Current Safe Head
 
-bf6dabc Add Crew Task Board portfolio home link
+d410fa9 Simplify Job Tracker portfolio navigation
 
 ## 2. Project
 
@@ -58,7 +58,15 @@ https://timbone72-cc.github.io/pwa-sample-portfolio/job-tracker/
 
 Last confirmed stable checkpoint:
 
-3bcf2ef Update checkpoint after final install check
+d410fa9 Simplify Job Tracker portfolio navigation
+
+Confirmed:
+
+- live Job Tracker page loads after simplified portfolio navigation deploy
+- Portfolio home link is present in Job Tracker
+- FieldLedger proof-of-work link was removed from the app navigation section
+- Job Tracker self-link was removed from the app navigation section
+- Job Tracker now routes viewers back to the portfolio home hub
 
 ### 3.2 Crew Task Board
 
@@ -221,19 +229,22 @@ Confirmed:
 
 ## 7. Recent Commits
 
+d410fa9 Simplify Job Tracker portfolio navigation
+11be587 Update checkpoint after Crew Task Board portfolio link
 bf6dabc Add Crew Task Board portfolio home link
 7e96b70 Update checkpoint after portfolio navigation polish
 b481cdd Add Service Call Log portfolio home link
 54f407d Add portfolio home page
-bc4d91a Update checkpoint after Service Call Log live validation
-7e441f1 Deploy Service Call Log demo to GitHub Pages docs
 
 ## 8. Next Best Step
 
-Continue portfolio-wide navigation polish.
+Continue portfolio-wide navigation polish only if another sample still needs the simplified Portfolio home hub link pattern.
 
-Known remaining link gap:
+Current simplified navigation rule:
 
-- Job Tracker needs a clear Portfolio home link
+- each sample app should point viewers back to Portfolio home
+- Portfolio home is the hub for choosing other apps
+- app screens should not link to themselves as live demos
+- GitHub/proof links should stay out of the main app navigation unless a separate developer/proof section is intentionally added later
 
 Do not start the Client-Inspired Capstone yet.
