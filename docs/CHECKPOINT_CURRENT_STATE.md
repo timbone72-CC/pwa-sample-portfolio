@@ -2,7 +2,7 @@
 
 ## 1. Current Safe Head
 
-9b3cbbb Polish Crew Task Board portfolio sections
+16264b6 Align sample app UI sections
 
 ## 2. Project
 
@@ -106,6 +106,9 @@ Confirmed working:
 - Crew Task Board now matches the Job Tracker-style Help / Future Options / About portfolio section format
 - Crew Task Board duplicate trailing portfolio CSS block was removed
 - Crew Task Board live GitHub Pages retest passed after section polish deploy
+- Crew Task Board saved tasks section now appears above Help / Future Options / About
+- Crew Task Board saved tasks section now uses the shared Saved Locally pattern
+- Crew Task Board live retest passed after saved-section order fix
 
 ### 3.3 Equipment Check Log
 
@@ -140,6 +143,9 @@ Confirmed working:
 - Equipment Check Log live portfolio section now links only to Portfolio home
 - add equipment check works in the live demo
 - refresh persistence works in the live demo
+- Equipment Check Log now matches the shared Help / Future Options / About lower-page pattern
+- Equipment Check Log About section links only to Portfolio home
+- Equipment Check Log live retest passed after UI consistency deploy
 
 ### 3.4 Quote Builder
 
@@ -178,6 +184,9 @@ Confirmed working:
 - Quote Builder live portfolio section now links only to Portfolio home
 - Quote Builder no longer shows app-to-app demo links in the app navigation section
 - Quote Builder cache/hard-refresh issue was cleared during live validation
+- Quote Builder now matches the shared Help / Future Options / About lower-page pattern
+- Quote Builder About section links only to Portfolio home
+- Quote Builder live retest passed after UI consistency deploy
 
 
 
@@ -229,24 +238,31 @@ Confirmed:
 - Service Call Log related links are visually separated
 - Service Call Log metadata uses Service Call Log title, favicon, and manifest paths
 - Portfolio home link is present in Service Call Log
+- Service Call Log now matches the shared Help / Future Options / About lower-page pattern
+- Service Call Log About section links only to Portfolio home
+- Service Call Log live retest passed after UI consistency deploy
 
 ## 7. Recent Commits
 
+16264b6 Align sample app UI sections
+83fad57 Add portfolio control standards
+2bcdb89 Update checkpoint after Crew Task Board section polish
+9b3cbbb Polish Crew Task Board portfolio sections
+dbee927 Update checkpoint after sample navigation simplification
 4a77cae Simplify sample app portfolio navigation
-a9abaa5 Update checkpoint after Job Tracker portfolio navigation
-d410fa9 Simplify Job Tracker portfolio navigation
-11be587 Update checkpoint after Crew Task Board portfolio link
-bf6dabc Add Crew Task Board portfolio home link
-7e96b70 Update checkpoint after portfolio navigation polish
 ## 8. Next Best Step
 
-Continue portfolio-wide navigation polish only if another sample still needs the simplified Portfolio home hub link pattern.
+Pause new sample work and run a final portfolio-wide review against the new control docs:
 
-Current simplified navigation rule:
+- docs/PWA_SAMPLE_PORTFOLIO_UI_STANDARD.md
+- docs/PWA_SAMPLE_PORTFOLIO_DEFINITION_OF_DONE.md
+- docs/PWA_SAMPLE_PORTFOLIO_SAMPLE_REVIEW_CHECKLIST.md
 
-- each sample app should point viewers back to Portfolio home
-- Portfolio home is the hub for choosing other apps
-- app screens should not link to themselves as live demos
-- GitHub/proof links should stay out of the main app navigation unless a separate developer/proof section is intentionally added later
+Current locked rules:
 
-Do not start the Client-Inspired Capstone yet.
+- Portfolio home is the hub
+- sample apps link only back to Portfolio home
+- no app-to-app navigation inside sample apps
+- no GitHub/proof links inside sample app navigation
+- Help / Future Options / About lower-page sections should remain consistent
+- do not start the Client-Inspired Capstone yet
