@@ -11,6 +11,6 @@ createRoot(document.getElementById('root')).render(
 
 if ('serviceWorker' in navigator) {
   window.addEventListener('load', () => {
-    navigator.serviceWorker.register('/pwa-sample-portfolio/quote-builder/sw.js')
+    navigator.serviceWorker.register('/pwa-sample-portfolio/service-call-log/sw.js')
   })
 }
