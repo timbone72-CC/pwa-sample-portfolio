@@ -444,9 +444,6 @@ function App() {
           </p>
         </div>
 
-        <a className="portfolio-link" href="#portfolio-links">
-          Portfolio Links
-        </a>
       </header>
 
       <section className="section-card">
