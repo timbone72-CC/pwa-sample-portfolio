@@ -2,7 +2,7 @@
 
 ## 1. Current Safe Head
 
-d410fa9 Simplify Job Tracker portfolio navigation
+4a77cae Simplify sample app portfolio navigation
 
 ## 2. Project
 
@@ -98,7 +98,7 @@ Confirmed working:
 - installed app opens directly to Crew Task Board
 - offline app shell reload works
 - saved task remains offline through localStorage
-- related Job Tracker demo link works from the live Crew Task Board app
+- Crew Task Board live portfolio section now links only to Portfolio home
 - Crew Task Board live retest passed after hard refresh cleared cached bundle
 - Crew Task Board local GitHub Pages-style path test passed
 - Crew Task Board related links are visually separated
@@ -133,8 +133,8 @@ Confirmed working:
 - service worker registration path points to Equipment Check Log subpath
 - unique sample icon files are present
 - portfolio link area is present
-- Crew Task Board demo link works from the live Equipment Check Log app
-- Job Tracker demo link works from the live Equipment Check Log app
+- Equipment Check Log no longer shows app-to-app demo links in the app navigation section
+- Equipment Check Log live portfolio section now links only to Portfolio home
 - add equipment check works in the live demo
 - refresh persistence works in the live demo
 
@@ -172,9 +172,9 @@ Confirmed working:
 - add quote works in the live demo
 - quote total calculates correctly in the live demo
 - refresh persistence works in the live demo
-- Job Tracker demo link works from the live Quote Builder app
-- Crew Task Board demo link works from the live Quote Builder app
-- Equipment Check Log demo link works from the live Quote Builder app
+- Quote Builder live portfolio section now links only to Portfolio home
+- Quote Builder no longer shows app-to-app demo links in the app navigation section
+- Quote Builder cache/hard-refresh issue was cleared during live validation
 
 
 
@@ -217,10 +217,10 @@ Confirmed:
 - add service call works
 - saved call appears
 - refresh persistence works
-- Job Tracker demo link works
-- Crew Task Board demo link works
-- Equipment Check Log demo link works
-- Quote Builder demo link works
+- Service Call Log live portfolio section now links only to Portfolio home
+- Service Call Log no longer shows app-to-app demo links in the app navigation section
+- Service Call Log no longer shows related sample links in the app navigation section
+- Service Call Log no longer shows Quote Builder link in the app navigation section
 - Service Call Log live retest passed after portfolio home link fix
 - Service Call Log local GitHub Pages-style path test passed
 - Service Call Log related links are visually separated
@@ -229,13 +229,12 @@ Confirmed:
 
 ## 7. Recent Commits
 
+4a77cae Simplify sample app portfolio navigation
+a9abaa5 Update checkpoint after Job Tracker portfolio navigation
 d410fa9 Simplify Job Tracker portfolio navigation
 11be587 Update checkpoint after Crew Task Board portfolio link
 bf6dabc Add Crew Task Board portfolio home link
 7e96b70 Update checkpoint after portfolio navigation polish
-b481cdd Add Service Call Log portfolio home link
-54f407d Add portfolio home page
-
 ## 8. Next Best Step
 
 Continue portfolio-wide navigation polish only if another sample still needs the simplified Portfolio home hub link pattern.
