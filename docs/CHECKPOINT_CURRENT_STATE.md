@@ -2,7 +2,7 @@
 
 ## 1. Current Safe Head
 
-16264b6 Align sample app UI sections
+83b4796 Update checkpoint after UI consistency pass
 
 ## 2. Project
 
@@ -244,12 +244,12 @@ Confirmed:
 
 ## 7. Recent Commits
 
+83b4796 Update checkpoint after UI consistency pass
 16264b6 Align sample app UI sections
 83fad57 Add portfolio control standards
 2bcdb89 Update checkpoint after Crew Task Board section polish
 9b3cbbb Polish Crew Task Board portfolio sections
 dbee927 Update checkpoint after sample navigation simplification
-4a77cae Simplify sample app portfolio navigation
 ## 8. Next Best Step
 
 Pause new sample work and run a final portfolio-wide review against the new control docs:
