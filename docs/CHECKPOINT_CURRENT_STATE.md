@@ -245,25 +245,21 @@ Confirmed:
 
 ## 7. Recent Commits
 
+95c1772 Reconcile roadmap with hub navigation rule
+3ac4271 Update checkpoint after Service Call Log service worker fix
 1868644 Fix Service Call Log service worker path
 e62212a Fix checkpoint safe head rule
 10e6a4c Align checkpoint with current head
 83b4796 Update checkpoint after UI consistency pass
-16264b6 Align sample app UI sections
-83fad57 Add portfolio control standards
 ## 8. Next Best Step
 
-Pause new sample work and run a final portfolio-wide review against the new control docs:
+Pause new sample work.
 
-- docs/PWA_SAMPLE_PORTFOLIO_UI_STANDARD.md
-- docs/PWA_SAMPLE_PORTFOLIO_DEFINITION_OF_DONE.md
-- docs/PWA_SAMPLE_PORTFOLIO_SAMPLE_REVIEW_CHECKLIST.md
+The roadmap has been reconciled with the locked hub-only navigation rule.
 
-Current locked rules:
+Remaining portfolio-wide review items:
 
-- Portfolio home is the hub
-- sample apps link only back to Portfolio home
-- no app-to-app navigation inside sample apps
-- no GitHub/proof links inside sample app navigation
-- Help / Future Options / About lower-page sections should remain consistent
-- do not start the Client-Inspired Capstone yet
+- review offline app-shell caching behavior as a separate technical pass
+- keep sample apps linked only back to Portfolio home
+- keep Help / Future Options / About lower-page sections consistent
+- do not start the Client-Inspired Capstone until sample-control work is intentionally closed
