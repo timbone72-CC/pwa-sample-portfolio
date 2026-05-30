@@ -2,7 +2,7 @@
 
 ## 1. Current Safe Head
 
-83b4796 Update checkpoint after UI consistency pass
+1868644 Fix Service Call Log service worker path
 
 ## 2. Project
 
@@ -241,15 +241,16 @@ Confirmed:
 - Service Call Log now matches the shared Help / Future Options / About lower-page pattern
 - Service Call Log About section links only to Portfolio home
 - Service Call Log live retest passed after UI consistency deploy
+- Service Call Log live retest passed after service worker path fix
 
 ## 7. Recent Commits
 
+1868644 Fix Service Call Log service worker path
+e62212a Fix checkpoint safe head rule
+10e6a4c Align checkpoint with current head
 83b4796 Update checkpoint after UI consistency pass
 16264b6 Align sample app UI sections
 83fad57 Add portfolio control standards
-2bcdb89 Update checkpoint after Crew Task Board section polish
-9b3cbbb Polish Crew Task Board portfolio sections
-dbee927 Update checkpoint after sample navigation simplification
 ## 8. Next Best Step
 
 Pause new sample work and run a final portfolio-wide review against the new control docs:
