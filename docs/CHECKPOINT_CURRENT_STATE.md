@@ -2,7 +2,7 @@
 
 ## 1. Current Safe Head
 
-1868644 Fix Service Call Log service worker path
+fe11f62 Improve sample asset caching
 
 ## 2. Project
 
@@ -245,21 +245,23 @@ Confirmed:
 
 ## 7. Recent Commits
 
+fe11f62 Improve sample asset caching
+a42fc7b Improve Service Call Log asset caching
+fa0a20a Update checkpoint after roadmap reconciliation
 95c1772 Reconcile roadmap with hub navigation rule
 3ac4271 Update checkpoint after Service Call Log service worker fix
 1868644 Fix Service Call Log service worker path
-e62212a Fix checkpoint safe head rule
-10e6a4c Align checkpoint with current head
-83b4796 Update checkpoint after UI consistency pass
 ## 8. Next Best Step
 
 Pause new sample work.
 
 The roadmap has been reconciled with the locked hub-only navigation rule.
 
-Remaining portfolio-wide review items:
+The portfolio-wide asset caching pass has been completed and live-smoke-tested.
 
-- review offline app-shell caching behavior as a separate technical pass
+Current next option:
+
+- run a final findings-only portfolio review against the control docs
 - keep sample apps linked only back to Portfolio home
 - keep Help / Future Options / About lower-page sections consistent
 - do not start the Client-Inspired Capstone until sample-control work is intentionally closed
