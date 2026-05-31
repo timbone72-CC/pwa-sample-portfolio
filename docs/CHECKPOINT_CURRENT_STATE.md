@@ -2,7 +2,7 @@
 
 ## 1. Current Safe Head
 
-fe11f62 Improve sample asset caching
+c90b6be Remove Job Tracker extra portfolio anchor
 
 ## 2. Project
 
@@ -67,6 +67,7 @@ Confirmed:
 - FieldLedger proof-of-work link was removed from the app navigation section
 - Job Tracker self-link was removed from the app navigation section
 - Job Tracker now routes viewers back to the portfolio home hub
+- Job Tracker extra header `Portfolio Links` anchor was removed and live-tested
 
 ### 3.2 Crew Task Board
 
@@ -245,12 +246,12 @@ Confirmed:
 
 ## 7. Recent Commits
 
+c90b6be Remove Job Tracker extra portfolio anchor
+8e6143d Update checkpoint after asset caching pass
 fe11f62 Improve sample asset caching
 a42fc7b Improve Service Call Log asset caching
 fa0a20a Update checkpoint after roadmap reconciliation
 95c1772 Reconcile roadmap with hub navigation rule
-3ac4271 Update checkpoint after Service Call Log service worker fix
-1868644 Fix Service Call Log service worker path
 ## 8. Next Best Step
 
 Pause new sample work.
