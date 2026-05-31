@@ -170,7 +170,7 @@ The capstone must be sanitized, generic, and free of private client data.
 
 Status:
 
-Complete first public demo.
+Complete and live.
 
 Primary user:
 
@@ -213,7 +213,7 @@ Optional / future.
 
 Status:
 
-Recommended next sample.
+Complete and live.
 
 Primary user:
 
@@ -255,7 +255,7 @@ Optional / future.
 
 Status:
 
-Planned.
+Complete and live.
 
 Primary user:
 
@@ -285,7 +285,7 @@ Optional / future.
 
 Status:
 
-Planned.
+Complete and live.
 
 Primary user:
 
@@ -315,7 +315,7 @@ Optional / future.
 
 Status:
 
-Planned.
+Complete and live.
 
 Primary user:
 
