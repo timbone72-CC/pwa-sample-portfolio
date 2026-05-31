@@ -2,7 +2,7 @@
 
 ## 1. Current Safe Head
 
-c90b6be Remove Job Tracker extra portfolio anchor
+0d00e85 Update roadmap sample statuses
 
 ## 2. Project
 
@@ -246,23 +246,29 @@ Confirmed:
 
 ## 7. Recent Commits
 
+0d00e85 Update roadmap sample statuses
+7fa3afa Clarify Crew Task Board portfolio copy
+6a5ce14 Clarify Job Tracker portfolio copy
+f8d53b0 Add Job Tracker manifest scope
+381de6c Update checkpoint after Job Tracker anchor fix
 c90b6be Remove Job Tracker extra portfolio anchor
 8e6143d Update checkpoint after asset caching pass
 fe11f62 Improve sample asset caching
-a42fc7b Improve Service Call Log asset caching
-fa0a20a Update checkpoint after roadmap reconciliation
-95c1772 Reconcile roadmap with hub navigation rule
+
 ## 8. Next Best Step
 
 Pause new sample work.
 
-The roadmap has been reconciled with the locked hub-only navigation rule.
+Final audit warnings have been cleared:
 
-The portfolio-wide asset caching pass has been completed and live-smoke-tested.
+- Job Tracker manifest now has explicit scope
+- Job Tracker About copy now names the PWA Sample Portfolio
+- Crew Task Board About copy now names the PWA Sample Portfolio
+- roadmap sample statuses now match the five completed live samples
 
 Current next option:
 
-- run a final findings-only portfolio review against the control docs
+- run one final findings-only portfolio review against the control docs
 - keep sample apps linked only back to Portfolio home
 - keep Help / Future Options / About lower-page sections consistent
 - do not start the Client-Inspired Capstone until sample-control work is intentionally closed
