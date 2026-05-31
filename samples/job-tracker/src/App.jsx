@@ -667,7 +667,7 @@ function App() {
         </div>
 
         <p className="helper-text">
-          This sample is part of a small-business PWA portfolio focused on simple,
+          This sample is part of the PWA Sample Portfolio, focused on simple,
           mobile-friendly tools that can run without a backend or login.
         </p>
 
