@@ -269,7 +269,7 @@ function App() {
         <p className="eyebrow">About</p>
         <h2 id="portfolio-links-title">Portfolio links</h2>
         <p>
-          This sample is part of a small-business PWA portfolio focused on simple, mobile-friendly tools that can run
+          This sample is part of the PWA Sample Portfolio, focused on simple, mobile-friendly tools that can run
           without a backend or login.
         </p>
         <div className="portfolio-links">
