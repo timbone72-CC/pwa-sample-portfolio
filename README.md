@@ -12,6 +12,16 @@ https://timbone72-cc.github.io/pwa-sample-portfolio/
 
 ## Live Samples
 
+### Featured Larger Workflow Demo
+
+| Template | Workflow | Live Demo |
+| --- | --- | --- |
+| FieldOps Ledger Template | Larger offline-first field-work ledger template with job records, expenses, reports, backup/export, and mobile-first workflow design | https://timbone72-cc.github.io/fieldops-ledger-template/ |
+
+### Small PWA Demos
+
+Samples 1 through 5 are intentionally small, focused PWA demos.
+
 | Sample | Workflow | Live Demo |
 | --- | --- | --- |
 | Job Tracker | Track completed jobs and simple work records | https://timbone72-cc.github.io/pwa-sample-portfolio/job-tracker/ |
