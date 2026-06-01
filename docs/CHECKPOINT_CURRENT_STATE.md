@@ -2,7 +2,7 @@
 
 ## 1. Current Safe Head
 
-25de51d Add public portfolio README
+4ec33a9 Feature FieldOps Ledger in portfolio
 
 ## 2. Project
 
@@ -34,7 +34,7 @@ Public portfolio home page exists and is live.
 
 Root README public proof note:
 
-- `README.md` exists at repo root and links to the live portfolio plus all five live samples.
+- `README.md` exists at repo root and links to the live portfolio, all five live samples, and the featured FieldOps Ledger Template larger demo.
 
 Live URL:
 
@@ -250,14 +250,14 @@ Confirmed:
 
 ## 7. Recent Commits
 
+4ec33a9 Feature FieldOps Ledger in portfolio
+ec673fb Update checkpoint after public README
 25de51d Add public portfolio README
 1a1ba14 Update checkpoint after final warning cleanup
 0d00e85 Update roadmap sample statuses
 7fa3afa Clarify Crew Task Board portfolio copy
 6a5ce14 Clarify Job Tracker portfolio copy
 f8d53b0 Add Job Tracker manifest scope
-381de6c Update checkpoint after Job Tracker anchor fix
-c90b6be Remove Job Tracker extra portfolio anchor
 
 ## 8. Next Best Step
 
