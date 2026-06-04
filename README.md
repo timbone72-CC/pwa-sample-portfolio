@@ -1,8 +1,8 @@
 # PWA Sample Portfolio
 
-A public portfolio of lightweight, mobile-friendly Progressive Web App samples for real business workflows.
+A public portfolio of reusable business workflow demos built as lightweight, mobile-friendly Progressive Web Apps.
 
-These demos show how simple operational problems can become usable tools for contractors, crews, service workers, and small business operations.
+These demos show how common operational patterns can become usable tools for contractors, crews, service workers, and small business operations. Existing demos are starting patterns that can be customized for real businesses.
 
 ## Live Portfolio
 
@@ -20,7 +20,7 @@ https://timbone72-cc.github.io/pwa-sample-portfolio/
 
 ### Small PWA Demos
 
-Samples 1 through 5 are intentionally small, focused PWA demos.
+Samples 1 through 5 are intentionally small, focused business workflow demos.
 
 | Sample | Workflow | Live Demo |
 | --- | --- | --- |
@@ -34,17 +34,25 @@ Samples 1 through 5 are intentionally small, focused PWA demos.
 
 - mobile-friendly app layouts
 - installable PWA patterns
-- focused workflow tools
+- reusable business workflow patterns
 - local-first saved records
 - simple business UI design
 - GitHub Pages deployment
-- repeatable sample app structure
+- repeatable demo app structure
+
+## Demo Boundaries
+
+- demo data is sample data
+- job posts and buyer requests are used only as market research patterns
+- public demos do not include private client records, payment processing, protected health data, or confidential integrations
+- no fixed public pricing is published here
+- custom versions depend on the workflow, fields, records, reports, and integrations needed
 
 ## Current Direction
 
 Samples 1 through 5 are complete and live.
 
-The final Client-Inspired Capstone is intentionally reserved. It should be based on a real client-inspired workflow instead of being guessed early.
+The final capstone is intentionally reserved. It should be based on repeated market research patterns and real business workflow demand instead of being guessed early.
 
 ## Project Structure
 
@@ -62,6 +70,6 @@ The final Client-Inspired Capstone is intentionally reserved. It should be based
 
 ## Build Purpose
 
-This portfolio is meant to show practical proof of lightweight operational app development.
+This portfolio is meant to show practical proof of lightweight operational app development and reusable business demo strategy.
 
-It is not a public SaaS platform, login system, or paid backend product. Each sample is intentionally small, understandable, and focused on one workflow.
+It is not a public SaaS platform, login system, or paid backend product. Each public sample is intentionally small, understandable, and focused on one workflow. Have a workflow like this? Contact me to discuss a custom version.

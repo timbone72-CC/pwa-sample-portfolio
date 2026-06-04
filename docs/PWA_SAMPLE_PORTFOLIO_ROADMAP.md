@@ -6,7 +6,7 @@ The PWA Sample Portfolio is a public collection of lightweight, mobile-friendly 
 
 The goal is to show that simple business problems can be turned into usable Progressive Web Apps that work well on phones, desktops, and installed app launchers.
 
-This portfolio is not limited to one industry. It can include apps for field work, small business operations, service work, contractors, personal productivity, and future client-inspired workflows.
+This portfolio is not limited to one industry. It can include apps for field work, small business operations, service work, contractors, personal productivity, and future market-informed workflows.
 
 ## 2. Core Portfolio Direction
 
@@ -15,7 +15,7 @@ The portfolio should show range:
 - simple apps
 - medium workflow apps
 - more advanced connected apps
-- future client-inspired examples
+- future market-informed examples
 
 Each sample should be useful on its own, but the collection should also feel connected.
 
@@ -264,7 +264,7 @@ Examples:
 - app plus calendar planning
 - app plus printable reports
 
-### 7.5 Level 5 — Client-Inspired Capstone
+### 7.5 Level 5 — Market-Informed Capstone
 
 The final sample slot should be reserved.
 
@@ -274,7 +274,7 @@ It should be based on:
 
 - real contract listings
 - repeated buyer requests
-- real client conversations
+- real client conversations used only as sanitized workflow research
 - common business workflow pain
 
 The capstone must be sanitized, generic, and free of private client data.
@@ -456,7 +456,7 @@ Connection status:
 
 Optional / future.
 
-### 8.6 Final Sample — Client-Inspired Capstone
+### 8.6 Final Sample — Market-Informed Capstone
 
 Status:
 
@@ -525,11 +525,11 @@ For each sample:
 
 Pause new sample work.
 
-Complete portfolio-wide review and cleanup before starting the Client-Inspired Capstone.
+Complete portfolio-wide review and cleanup before starting the Market-Informed Capstone.
 
 Current priority:
 
 - keep the five existing samples stable
 - reconcile stale docs with the locked hub-only navigation rule
 - review offline app-shell behavior as a separate technical pass
-- do not start the Client-Inspired Capstone until sample-control work is intentionally closed
+- do not start the Market-Informed Capstone until sample-control work is intentionally closed

@@ -77,6 +77,41 @@
         gap: 18px;
       }
 
+      .info-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 18px;
+      }
+
+      .info-panel {
+        padding: 22px;
+        background: #ffffff;
+        border: 1px solid #dbe5f3;
+        border-radius: 22px;
+        box-shadow: 0 14px 34px rgba(15, 23, 42, 0.06);
+      }
+
+      .info-panel h3 {
+        margin: 0 0 10px;
+        font-size: 1.1rem;
+        letter-spacing: -0.02em;
+      }
+
+      .info-panel p,
+      .info-panel li {
+        color: #64748b;
+        line-height: 1.55;
+      }
+
+      .info-panel p {
+        margin: 0;
+      }
+
+      .info-panel ul {
+        margin: 0;
+        padding-left: 20px;
+      }
+
       .featured-card {
         display: block;
         padding: clamp(24px, 4vw, 36px);
@@ -121,7 +156,6 @@
         gap: 18px;
         padding: 22px;
         color: inherit;
-        text-decoration: none;
         background: #ffffff;
         border: 1px solid #dbe5f3;
         border-radius: 22px;
@@ -133,11 +167,10 @@
       }
 
       .card:hover,
-      .card:focus-visible {
+      .card:focus-within {
         transform: translateY(-3px);
         border-color: #93c5fd;
         box-shadow: 0 20px 42px rgba(15, 23, 42, 0.1);
-        outline: none;
       }
 
       .card h2 {
@@ -150,6 +183,23 @@
         margin: 0;
         color: #64748b;
         line-height: 1.55;
+      }
+
+      .card-actions {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 12px;
+      }
+
+      .card-actions a {
+        color: #1d4ed8;
+        font-weight: 800;
+        text-decoration: none;
+      }
+
+      .card-actions a:hover,
+      .card-actions a:focus-visible {
+        text-decoration: underline;
       }
 
       .tag {
@@ -174,6 +224,30 @@
         line-height: 1.6;
       }
 
+      .about-list {
+        display: grid;
+        gap: 16px;
+      }
+
+      .about-demo {
+        padding: 20px;
+        background: #ffffff;
+        border: 1px solid #dbe5f3;
+        border-radius: 18px;
+      }
+
+      .about-demo h3 {
+        margin: 0 0 8px;
+        font-size: 1.1rem;
+        letter-spacing: -0.02em;
+      }
+
+      .about-demo p {
+        margin: 0;
+        color: #64748b;
+        line-height: 1.55;
+      }
+
       footer {
         margin-top: 36px;
         color: #64748b;
@@ -194,6 +268,10 @@
         .card {
           min-height: auto;
         }
+
+        .card-actions {
+          flex-direction: column;
+        }
       }
     </style>
   </head>
@@ -203,10 +281,38 @@
         <p class="eyebrow">PWA Sample Portfolio</p>
         <h1 id="portfolio-title">Small workflow apps built for real business problems.</h1>
         <p class="intro">
-          A collection of lightweight, mobile-friendly Progressive Web App samples for contractors,
-          crews, service workers, and small business operations. Each demo is designed to stand alone,
-          install cleanly, and show a practical workflow pattern.
+          A collection of reusable business workflow demos for contractors, crews, service workers,
+          and small business operations. Each demo is a starting pattern that can be customized into a
+          real business tool without treating market research examples as copied client work.
         </p>
+      </section>
+
+      <h2 class="section-heading">What these demos show</h2>
+
+      <section class="info-grid" aria-label="Portfolio positioning">
+        <article class="info-panel">
+          <h3>Reusable workflow patterns</h3>
+          <p>
+            The demos show focused ways to collect work records, assign tasks, check equipment,
+            prepare quotes, and track service calls from a phone or desktop.
+          </p>
+        </article>
+
+        <article class="info-panel">
+          <h3>Custom business versions</h3>
+          <p>
+            Existing demos are small starting points. A custom version can add the fields, reports,
+            exports, roles, branding, and integrations that match a real business process.
+          </p>
+        </article>
+
+        <article class="info-panel">
+          <h3>Market-informed, not copied</h3>
+          <p>
+            Job posts and buyer requests are used only to spot repeated workflow patterns. Public
+            demos do not copy private client workflows, brands, documents, records, or job-post text.
+          </p>
+        </article>
       </section>
 
       <h2 class="section-heading">Featured workflow template</h2>
@@ -215,8 +321,8 @@
         <span class="tag">Larger workflow demo</span>
         <h2>FieldOps Ledger Template</h2>
         <p>
-          A larger offline-first field-work ledger template with job records, expenses, reports,
-          backup and export tools, and a mobile-first workflow design.
+          A larger offline-first field-work ledger template with sample job records, expenses,
+          reports, backup and export tools, and a mobile-first workflow design.
         </p>
         <strong>Open featured template →</strong>
       </a>
@@ -224,56 +330,155 @@
       <h2 class="section-heading">Small PWA demos</h2>
 
       <section class="grid" aria-label="Live sample applications">
-        <a class="card" href="./job-tracker/">
+        <article class="card">
           <div>
             <span class="tag">Sample 1</span>
             <h2>Job Tracker</h2>
             <p>Track completed jobs and simple work records from a phone or desktop.</p>
           </div>
-          <strong>Open demo →</strong>
-        </a>
+          <div class="card-actions">
+            <a href="./job-tracker/">Open demo →</a>
+            <a href="#about-job-tracker">About this demo</a>
+          </div>
+        </article>
 
-        <a class="card" href="./crew-task-board/">
+        <article class="card">
           <div>
             <span class="tag">Sample 2</span>
             <h2>Crew Task Board</h2>
             <p>Assign daily tasks, track status, and keep a small crew organized.</p>
           </div>
-          <strong>Open demo →</strong>
-        </a>
+          <div class="card-actions">
+            <a href="./crew-task-board/">Open demo →</a>
+            <a href="#about-crew-task-board">About this demo</a>
+          </div>
+        </article>
 
-        <a class="card" href="./equipment-check-log/">
+        <article class="card">
           <div>
             <span class="tag">Sample 3</span>
             <h2>Equipment Check Log</h2>
             <p>Record equipment readiness, inspection notes, and maintenance issues.</p>
           </div>
-          <strong>Open demo →</strong>
-        </a>
+          <div class="card-actions">
+            <a href="./equipment-check-log/">Open demo →</a>
+            <a href="#about-equipment-check-log">About this demo</a>
+          </div>
+        </article>
 
-        <a class="card" href="./quote-builder/">
+        <article class="card">
           <div>
             <span class="tag">Sample 4</span>
             <h2>Quote Builder</h2>
             <p>Build simple service quotes from labor, materials, trip charges, and notes.</p>
           </div>
-          <strong>Open demo →</strong>
-        </a>
+          <div class="card-actions">
+            <a href="./quote-builder/">Open demo →</a>
+            <a href="#about-quote-builder">About this demo</a>
+          </div>
+        </article>
 
-        <a class="card" href="./service-call-log/">
+        <article class="card">
           <div>
             <span class="tag">Sample 5</span>
             <h2>Service Call Log</h2>
             <p>Track customer service calls, statuses, follow-up notes, and saved records.</p>
           </div>
-          <strong>Open demo →</strong>
-        </a>
+          <div class="card-actions">
+            <a href="./service-call-log/">Open demo →</a>
+            <a href="#about-service-call-log">About this demo</a>
+          </div>
+        </article>
+      </section>
+
+      <h2 class="section-heading">About the small demos</h2>
+
+      <section class="about-list" aria-label="About each small demo">
+        <article class="about-demo" id="about-job-tracker">
+          <h3>Job Tracker</h3>
+          <p>
+            Shows a completed-work log for jobs, dates, notes, and simple records. A custom version
+            could add customer fields, crew assignments, exports, billing handoff, or business-specific
+            job categories.
+          </p>
+        </article>
+
+        <article class="about-demo" id="about-crew-task-board">
+          <h3>Crew Task Board</h3>
+          <p>
+            Shows a lightweight daily task board for assigning work and tracking status. A custom
+            version could add team roles, recurring checklists, job links, notifications, or manager
+            reporting.
+          </p>
+        </article>
+
+        <article class="about-demo" id="about-equipment-check-log">
+          <h3>Equipment Check Log</h3>
+          <p>
+            Shows readiness checks, inspection notes, and issue tracking for equipment. A custom
+            version could add asset lists, photo notes, maintenance schedules, exportable reports, or
+            alerts.
+          </p>
+        </article>
+
+        <article class="about-demo" id="about-quote-builder">
+          <h3>Quote Builder</h3>
+          <p>
+            Shows a simple estimate workflow using sample labor, materials, trip charges, and notes. A
+            custom version could add branded quote templates, customer records, approval status,
+            exports, or follow-up tracking.
+          </p>
+        </article>
+
+        <article class="about-demo" id="about-service-call-log">
+          <h3>Service Call Log</h3>
+          <p>
+            Shows customer call intake, status, follow-up notes, and saved records. A custom version
+            could add dispatch views, service history, reminder workflows, quote handoff, or admin
+            dashboards.
+          </p>
+        </article>
+      </section>
+
+      <h2 class="section-heading">What is real vs sample</h2>
+
+      <section class="info-grid" aria-label="Demo trust notes">
+        <article class="info-panel">
+          <h3>Real workflow shape</h3>
+          <p>
+            The screens, flows, and saved-record patterns are working demo implementations meant to
+            show how business tasks can become usable web apps.
+          </p>
+        </article>
+
+        <article class="info-panel">
+          <h3>Sample data only</h3>
+          <p>
+            Demo data is sample data. Public demos do not include private client records, protected
+            health data, payment processing, confidential integrations, or private file storage.
+          </p>
+        </article>
+
+        <article class="info-panel">
+          <h3>No fixed public pricing</h3>
+          <p>
+            Custom versions depend on workflow scope, data needs, and integration risk. There are no
+            fixed public prices published here.
+          </p>
+        </article>
+      </section>
+
+      <section class="note" id="custom-version">
+        <strong>Need a workflow like one of these?</strong>
+        Use these demos as starting points for a custom version built around your real fields,
+        reports, records, and daily process.
+        <strong>Contact me to discuss a custom version.</strong>
       </section>
 
       <section class="note">
         <strong>Portfolio direction:</strong>
-        samples 1–5 are intentionally small, practical PWA demos. FieldOps Ledger Template is a larger
-        case-study-style example of an offline-first field-work workflow.
+        samples 1–5 are intentionally small, practical business workflow demos. FieldOps Ledger
+        Template is a larger example of an offline-first field-work workflow.
       </section>
 
       <footer>
