@@ -21,6 +21,121 @@ Each sample should be useful on its own, but the collection should also feel con
 
 The portfolio should not become random. Every sample should map to a real-world workflow pattern that a contractor, small business, crew lead, technician, owner, dispatcher, or similar user might actually need.
 
+### Business Demo Strategy
+
+The portfolio should present each app as a reusable business workflow demo, not just a code sample.
+
+The public message is:
+
+These demos are simple working examples of business workflows. Each one can be customized into a larger app for a real business.
+
+Existing demos stay in the portfolio, but their meaning should be framed clearly:
+
+- Job Tracker shows completed work tracking.
+- Crew Task Board shows team task tracking.
+- Equipment Check Log shows readiness and issue tracking.
+- Quote Builder shows simple estimate creation.
+- Service Call Log shows customer call and follow-up tracking.
+- FieldOps Ledger shows a larger offline workflow proof.
+
+### Market Research Rule
+
+Job posts, buyer requests, and contract listings may be used for market research only.
+
+Use them to identify repeated workflow patterns such as:
+
+- recurring deadlines
+- expenses
+- client intake
+- document review
+- project approvals
+- service calls
+- quotes
+- order tracking
+- customer follow-up
+- admin dashboards
+- client portals
+- local directories
+
+Do not copy a client's private workflow, brand, documents, data, or exact job-post wording.
+
+Reject demo ideas that are too specific to one company, legally risky, health/privacy heavy, payment/escrow heavy, native-mobile only, dependent on fragile third-party APIs, or too large for a clean PWA demo.
+
+### About This Demo Rule
+
+Each public demo should eventually have:
+
+- `Open demo`
+- `About this demo`
+
+The short card description can stay brief.
+
+The `About this demo` area should explain:
+
+- what this demo shows
+- who can use it
+- simple workflow
+- how it can be personalized
+- what changes for your business
+- what it can grow into
+- possible add-ons
+- contact message for a custom version
+
+Workflow diagrams should be simple business-flow diagrams, not technical architecture diagrams.
+
+### Customization And Pricing Rule
+
+Public portfolio wording should focus on customization, not fixed pricing.
+
+Use language like:
+
+Have a workflow like this? Contact me to discuss a custom version.
+
+Do not publish fixed prices inside the portfolio.
+
+Private planning may track rough price ranges, add-ons, buyer type, risk level, and proposal notes in a separate private planner or sheet.
+
+### Trust And Proof Rule
+
+Each demo should be honest about what is real and what is sample-only.
+
+Public demo pages should make clear that:
+
+- demo data is sample data
+- custom versions can use real business records
+- public demos do not contain private client data
+- public demos do not include real payment processing, private file storage, protected health data, or confidential integrations
+
+The portfolio should also explain what the demos prove:
+
+- mobile-friendly workflow design
+- installable PWA behavior where enabled
+- offline-friendly behavior where useful
+- browser-saved records for demo use
+- clean workflow screens
+- reusable business patterns
+- GitHub Pages deployment
+
+Each demo can also use a maturity label:
+
+- Demo — browser-only workflow proof
+- Starter App — customized for one business
+- Business App — login, database, admin dashboard, exports
+- Advanced System — notifications, integrations, permissions, or complex reporting
+
+### Visual Proof Rule
+
+Each demo should eventually have at least one visual proof item on the portfolio home page or About section.
+
+Acceptable proof items:
+
+- small screenshot
+- phone mockup
+- simple workflow diagram
+- short before-and-after workflow explanation
+
+Screenshots and diagrams should help a non-technical buyer understand the workflow quickly.
+
 ## 3. Sample App Rules
 
 Each sample app must define:
