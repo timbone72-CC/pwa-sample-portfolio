@@ -2,7 +2,7 @@
 
 ## 1. Current Safe Head
 
-dcfbeaf Add business demo strategy to roadmap
+a90ed15 Align portfolio with business demo strategy
 
 ## 2. Project
 
@@ -250,6 +250,8 @@ Confirmed:
 
 ## 7. Recent Commits
 
+a90ed15 Align portfolio with business demo strategy
+89d19d7 Update checkpoint after business demo roadmap
 dcfbeaf Add business demo strategy to roadmap
 4ec33a9 Feature FieldOps Ledger in portfolio
 ec673fb Update checkpoint after public README
@@ -264,18 +266,17 @@ f8d53b0 Add Job Tracker manifest scope
 
 Pause new sample work.
 
-The roadmap now includes the business demo strategy:
+The public portfolio now matches the business demo strategy:
 
-- current demos are framed as reusable business workflow demos
-- job posts are used only for market research patterns
-- each public demo should eventually support `Open demo` and `About this demo`
-- public wording should focus on custom versions instead of fixed prices
-- demo pages should be honest about sample data, privacy boundaries, and what is not included
-- visual proof items should be added over time
+- README frames the repo as reusable business workflow demos
+- homepage explains what the demos show
+- homepage explains customization and sample-data boundaries
+- each small demo card has `Open demo` and `About this demo`
+- capstone wording is now `Market-Informed Capstone`
 
 Current next option:
 
-- update the public homepage messaging to match the roadmap
-- add an `About this demo` pattern to one demo first
+- live-check the portfolio homepage after GitHub Pages updates
+- add deeper `About this demo` content to one demo first
 - keep sample apps linked only back to Portfolio home
-- do not start the Client-Inspired Capstone until sample-control work is intentionally closed
+- do not start the Market-Informed Capstone until sample-control work is intentionally closed
