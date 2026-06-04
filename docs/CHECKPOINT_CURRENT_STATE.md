@@ -273,6 +273,7 @@ The public portfolio now matches the business demo strategy:
 - homepage explains customization and sample-data boundaries
 - each small demo card has `Open demo` and `About this demo`
 - capstone wording is now `Market-Informed Capstone`
+- live homepage check found the new business-demo content on GitHub Pages
 
 Current next option:
 
