@@ -2,7 +2,7 @@
 
 ## 1. Current Safe Head
 
-4ec33a9 Feature FieldOps Ledger in portfolio
+dcfbeaf Add business demo strategy to roadmap
 
 ## 2. Project
 
@@ -250,6 +250,7 @@ Confirmed:
 
 ## 7. Recent Commits
 
+dcfbeaf Add business demo strategy to roadmap
 4ec33a9 Feature FieldOps Ledger in portfolio
 ec673fb Update checkpoint after public README
 25de51d Add public portfolio README
@@ -263,16 +264,18 @@ f8d53b0 Add Job Tracker manifest scope
 
 Pause new sample work.
 
-Final audit warnings have been cleared:
+The roadmap now includes the business demo strategy:
 
-- Job Tracker manifest now has explicit scope
-- Job Tracker About copy now names the PWA Sample Portfolio
-- Crew Task Board About copy now names the PWA Sample Portfolio
-- roadmap sample statuses now match the five completed live samples
+- current demos are framed as reusable business workflow demos
+- job posts are used only for market research patterns
+- each public demo should eventually support `Open demo` and `About this demo`
+- public wording should focus on custom versions instead of fixed prices
+- demo pages should be honest about sample data, privacy boundaries, and what is not included
+- visual proof items should be added over time
 
 Current next option:
 
-- run one final findings-only portfolio review against the control docs
+- update the public homepage messaging to match the roadmap
+- add an `About this demo` pattern to one demo first
 - keep sample apps linked only back to Portfolio home
-- keep Help / Future Options / About lower-page sections consistent
 - do not start the Client-Inspired Capstone until sample-control work is intentionally closed
