@@ -49,6 +49,7 @@ Confirmed:
 - All five About this demo sections now include workflow, audience, customization, and sample-data boundary notes
 - Live homepage anchor check confirmed the expanded About this demo content is visible and readable
 - Homepage custom-version CTA now includes GitHub, Upwork, and email contact paths
+- Public/incognito contact-link check confirmed GitHub and Upwork profiles open, and email opens the visitor's mail flow
 - Market-Informed Capstone remains reserved and not built early
 
 ## 3. Confirmed Live Samples
