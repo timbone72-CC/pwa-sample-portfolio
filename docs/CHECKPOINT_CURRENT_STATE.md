@@ -2,7 +2,7 @@
 
 ## 1. Current Safe Head
 
-bd75fc9 Expand remaining demo about content
+a47eca6 Add homepage contact paths
 
 ## 2. Project
 
@@ -48,6 +48,7 @@ Confirmed:
 - all five live demo cards are linked
 - All five About this demo sections now include workflow, audience, customization, and sample-data boundary notes
 - Live homepage anchor check confirmed the expanded About this demo content is visible and readable
+- Homepage custom-version CTA now includes GitHub, Upwork, and email contact paths
 - Market-Informed Capstone remains reserved and not built early
 
 ## 3. Confirmed Live Samples
