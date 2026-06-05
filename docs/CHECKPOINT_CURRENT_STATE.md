@@ -2,7 +2,7 @@
 
 ## 1. Current Safe Head
 
-5919084 Expand Job Tracker about demo content
+bd75fc9 Expand remaining demo about content
 
 ## 2. Project
 
@@ -46,7 +46,7 @@ Confirmed:
 - local portfolio home page loads
 - live portfolio home page loads
 - all five live demo cards are linked
-- Job Tracker About this demo content was expanded with workflow, audience, customization, and sample-data boundary notes
+- All five About this demo sections now include workflow, audience, customization, and sample-data boundary notes
 - Market-Informed Capstone remains reserved and not built early
 
 ## 3. Confirmed Live Samples
