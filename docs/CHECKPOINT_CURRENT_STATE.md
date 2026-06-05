@@ -47,6 +47,7 @@ Confirmed:
 - live portfolio home page loads
 - all five live demo cards are linked
 - All five About this demo sections now include workflow, audience, customization, and sample-data boundary notes
+- Live homepage anchor check confirmed the expanded About this demo content is visible and readable
 - Market-Informed Capstone remains reserved and not built early
 
 ## 3. Confirmed Live Samples
