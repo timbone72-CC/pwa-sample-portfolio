@@ -2,7 +2,7 @@
 
 ## 1. Current Safe Head
 
-a47eca6 Add homepage contact paths
+db094fc Add profile portfolio setup handoff
 
 ## 2. Project
 
@@ -51,6 +51,7 @@ Confirmed:
 - Homepage custom-version CTA now includes GitHub, Upwork, and email contact paths
 - Public/incognito contact-link check confirmed GitHub and Upwork profiles open, and email opens the visitor's mail flow
 - Linked GitHub profile now has a neutral public README with portfolio links and contact paths
+- Profile and portfolio setup handoff was added at docs/PROFILE_PORTFOLIO_SETUP_HANDOFF.md
 - Market-Informed Capstone remains reserved and not built early
 
 ## 3. Confirmed Live Samples
