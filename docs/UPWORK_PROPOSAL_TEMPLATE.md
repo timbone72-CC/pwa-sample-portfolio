@@ -29,3 +29,23 @@ I am comfortable working with written communication, short updates, and mileston
 I can start by outlining the simplest version of your workflow app before any larger features are added.
 
 Thanks.
+
+## Short Quick-Apply Version
+
+Hi,
+
+I build simple, mobile-friendly workflow apps for small businesses, contractors, field workers, and service teams.
+
+This sounds like a good fit for a focused first version: confirm the workflow, build the main screens, add saved records or export if needed, then polish after review.
+
+Public examples:
+
+PWA Sample Portfolio:
+https://timbone72-cc.github.io/pwa-sample-portfolio/
+
+FieldOps Ledger Template:
+https://timbone72-cc.github.io/fieldops-ledger-template/
+
+I prefer clear written communication, screenshots, short updates, and milestone reviews so the scope stays organized.
+
+Thanks.
