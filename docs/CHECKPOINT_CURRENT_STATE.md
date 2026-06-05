@@ -2,7 +2,7 @@
 
 ## 1. Current Safe Head
 
-49b44a9 Add short Upwork proposal template
+53a2cb0 Remove internal setup docs from public repo
 
 ## 2. Project
 
