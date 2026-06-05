@@ -51,8 +51,6 @@ Confirmed:
 - Homepage custom-version CTA now includes GitHub, Upwork, and email contact paths
 - Public/incognito contact-link check confirmed GitHub and Upwork profiles open, and email opens the visitor's mail flow
 - Linked GitHub profile now has a neutral public README with portfolio links and contact paths
-- Profile and portfolio setup handoff was added at docs/PROFILE_PORTFOLIO_SETUP_HANDOFF.md
-- Reusable Upwork proposal template was added at docs/UPWORK_PROPOSAL_TEMPLATE.md, including a short quick-apply version
 - Market-Informed Capstone remains reserved and not built early
 
 ## 3. Confirmed Live Samples
