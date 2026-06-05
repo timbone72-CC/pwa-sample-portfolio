@@ -2,7 +2,7 @@
 
 ## 1. Current Safe Head
 
-a90ed15 Align portfolio with business demo strategy
+ee6ad40 Record business demo homepage live check
 
 ## 2. Project
 
