@@ -2,7 +2,7 @@
 
 ## 1. Current Safe Head
 
-ee6ad40 Record business demo homepage live check
+5919084 Expand Job Tracker about demo content
 
 ## 2. Project
 
@@ -46,7 +46,8 @@ Confirmed:
 - local portfolio home page loads
 - live portfolio home page loads
 - all five live demo cards are linked
-- Client-Inspired Capstone remains reserved and not built early
+- Job Tracker About this demo content was expanded with workflow, audience, customization, and sample-data boundary notes
+- Market-Informed Capstone remains reserved and not built early
 
 ## 3. Confirmed Live Samples
 
