@@ -30,6 +30,12 @@ Samples 1 through 5 are intentionally small, focused business workflow demos.
 | Quote Builder | Build simple service quotes from labor, materials, and notes | https://timbone72-cc.github.io/pwa-sample-portfolio/quote-builder/ |
 | Service Call Log | Track customer calls, statuses, follow-up notes, and saved records | https://timbone72-cc.github.io/pwa-sample-portfolio/service-call-log/ |
 
+### Workbook Demos
+
+| Collection | Workflow | Live Page |
+| --- | --- | --- |
+| Workbook Demos | Spreadsheet workflow examples for trackers, dashboards, intake logs, validation checks, and status reporting | https://timbone72-cc.github.io/pwa-sample-portfolio/workbook-demos/ |
+
 ## What This Portfolio Demonstrates
 
 - mobile-friendly app layouts
